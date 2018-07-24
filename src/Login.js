@@ -12,7 +12,7 @@ export default function Login() {
         className="User"
       />
       <UserInfo type="password" name="" id="" placeholder="Password" className="User" />
-      <button type="submit" className="">
+      <button type="submit" className="User">
         Login / Creat Account
       </button>
     </Fields>
