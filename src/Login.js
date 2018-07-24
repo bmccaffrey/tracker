@@ -14,11 +14,13 @@ Login / Creat Account
 }
 
 const UserInfo = styled.input`
-  width: 100%;
-  height: 30px;
-  text-align: center;
   background: #eee;
-  color: #444;
+  border: 0;
   border-radius: 10px;
+  color: #444;
+  height: 30px;
   margin-top: 25px;
+  padding: 0;
+  text-align: center;
+  width: 100%;
 `;
