@@ -6,7 +6,7 @@ export default function Header(props) {
   return (
     <Banner className="App-header">
       <div>
-        <img src={logo} className="App-logo" alt="logo" />
+        <Logo src={logo} className="App-logo" alt="logo" />
         <h1 className="App-title">
 Welcome to React
         </h1>
@@ -24,4 +24,9 @@ const Banner = styled.header`
     width: 100%;
     justify-content: center;
   }
+`;
+const Logo = styled.img`
+  height: 50px;
+  width: 50px;
+  float: left;
 `;
