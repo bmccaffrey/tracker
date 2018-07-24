@@ -12,6 +12,9 @@ export default function Login() {
         className="User"
       />
       <UserInfo type="password" name="" id="" placeholder="Password" className="User" />
+      <Forget>
+Forgot password?
+      </Forget>
       <button type="submit" className="User">
         Login / Creat Account
       </button>
@@ -37,4 +40,10 @@ const Fields = styled.div`
       color: #444;
     }
   }
+`;
+
+const Forget = styled.div`
+  font-size: 0.75rem;
+  float: right;
+  margin-top: 25px;
 `;
