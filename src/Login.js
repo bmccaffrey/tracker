@@ -4,14 +4,14 @@ import styled from 'styled-components';
 export default function Login() {
   return (
     <Fields>
-      <UserInfo
+      <input
         type="email"
         name=""
         id=""
         placeholder="Phone number, username, or e-mail"
         className="User"
       />
-      <UserInfo type="password" name="" id="" placeholder="Password" className="User" />
+      <input type="password" name="" id="" placeholder="Password" className="User" />
       <Forget>
 Forgot password?
       </Forget>
@@ -21,8 +21,6 @@ Forgot password?
     </Fields>
   );
 }
-
-const UserInfo = styled.input``;
 
 const Fields = styled.div`
   background: white;
