@@ -2,18 +2,18 @@ import React, { Component } from 'react';
 import styled from 'styled-components';
 import logo from './logo.svg';
 
-export default function Header(props) {
-  return (
-    <Banner className="App-header">
-      <div>
-        <Logo src={logo} className="App-logo" alt="logo" />
-        <Title className="App-title">
+const Header = () => (
+  <Banner className="App-header">
+    <div>
+      <Logo src={logo} className="App-logo" alt="logo" />
+      <Title className="App-title">
 Welcome to React
-        </Title>
-      </div>
-    </Banner>
-  );
-}
+      </Title>
+    </div>
+  </Banner>
+);
+
+export default Header;
 
 const Banner = styled.header`
   background: black;
