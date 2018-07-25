@@ -1,26 +1,26 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
 
-export default function Login() {
-  return (
-    <Fields>
-      <input
-        type="email"
-        name=""
-        id=""
-        placeholder="Phone number, username, or e-mail"
-        className="User"
-      />
-      <input type="password" name="" id="" placeholder="Password" className="User" />
-      <Forget>
+const Login = () => (
+  <Fields>
+    <input
+      type="email"
+      name=""
+      id=""
+      placeholder="Phone number, username, or e-mail"
+      className="User"
+    />
+    <input type="password" name="" id="" placeholder="Password" className="User" />
+    <Forget>
 Forgot password?
-      </Forget>
-      <button type="submit" className="User">
-        Login / Creat Account
-      </button>
-    </Fields>
-  );
-}
+    </Forget>
+    <button type="submit" className="User">
+      Login / Creat Account
+    </button>
+  </Fields>
+);
+
+export default Login;
 
 const Fields = styled.div`
   background: white;
