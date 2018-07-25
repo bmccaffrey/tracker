@@ -42,6 +42,6 @@ const Fields = styled.div`
 
 const Forget = styled.div`
   font-size: 0.75rem;
-  float: right;
-  margin-top: 25px;
+  text-align: right;
+  margin-top: 10px;
 `;
