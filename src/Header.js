@@ -1,16 +1,21 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
+import {
+  BrowserRouter as Router, Route, Switch, Link,
+} from 'react-router-dom';
 import logo from './logo.svg';
 
 const Header = () => (
-  <Banner className="App-header">
-    <div>
-      <Logo src={logo} className="App-logo" alt="logo" />
-      <Title className="App-title">
+  <Link to="/">
+    <Banner className="App-header">
+      <div>
+        <Logo src={logo} className="App-logo" alt="logo" />
+        <Title className="App-title">
 Welcome to React
-      </Title>
-    </div>
-  </Banner>
+        </Title>
+      </div>
+    </Banner>
+  </Link>
 );
 
 export default Header;
