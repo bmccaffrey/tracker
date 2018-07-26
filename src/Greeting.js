@@ -6,30 +6,26 @@ class Greeting extends Component {
     super(props);
   }
 
+  submit = () => {
+    console.log(this.text.value);
+  };
+
   render() {
     return (
       <div>
         <Header />
-        <h1>
-Hiya!
-        </h1>
+        <h1>Hiya!</h1>
 
-        <h2>
-Let's get tracking!
-        </h2>
+        <h2>Let's get tracking!</h2>
         <hr />
-        <p>
-What would you like to start tracking?
-        </p>
+        <p>What would you like to start tracking?</p>
 
         <input type="text" ref={input => (this.text = input)} />
-        <button type="submit">
-Track
+        <button type="submit" onClick={this.submit}>
+          Track
         </button>
 
-        <button>
-Clear
-        </button>
+        <button>Clear</button>
       </div>
     );
   }
