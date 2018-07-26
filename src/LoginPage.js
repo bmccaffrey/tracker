@@ -6,14 +6,14 @@ import {
 import Header from './Header';
 import Login from './Login';
 
-const App = () => (
+const LoginPage = () => (
   <AppGrid className="App">
     <Header />
     <Login />
   </AppGrid>
 );
 
-export default App;
+export default LoginPage;
 
 const AppGrid = styled.div`
   display: grid;
