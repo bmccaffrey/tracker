@@ -22,7 +22,7 @@ Let's get tracking!
 What would you like to start tracking?
         </p>
 
-        <input type="text" />
+        <input type="text" ref={input => (this.text = input)} />
         <button type="submit">
 Track
         </button>
