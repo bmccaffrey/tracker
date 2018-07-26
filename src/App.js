@@ -8,10 +8,15 @@ import Header from './Header';
 import Login from './Login';
 
 const App = () => (
-  <AppGrid className="App">
-    <Header />
-    <Login />
-  </AppGrid>
+  <Router>
+    <AppGrid className="App">
+      <Header />
+      <Switch>
+        <Route exact path="/" component={Login} />
+        <Route path="/test" component={Test} />
+      </Switch>
+    </AppGrid>
+  </Router>
 );
 
 export default App;
@@ -20,3 +25,9 @@ const AppGrid = styled.div`
   display: grid;
   grid-template-rows: repeat(2, 25%);
 `;
+
+const Test = () => (
+  <h1>
+Test
+  </h1>
+);
