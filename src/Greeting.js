@@ -25,7 +25,7 @@ Let's get tracking!
 What would you like to start tracking?
         </p>
 
-        <input type="text" />
+        <input type="text" value={this.state.value} />
         <button type="submit" onClick={this.submit}>
           Track
         </button>
