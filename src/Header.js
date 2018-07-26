@@ -1,8 +1,6 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
-import {
-  BrowserRouter as Router, Route, Switch, Link,
-} from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import logo from './logo.svg';
 
 const Header = () => (
