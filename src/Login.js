@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { BrowserRouter as Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 
 const Login = () => (
@@ -15,7 +15,6 @@ const Login = () => (
     <Forget>
 Forgot password?
     </Forget>
-
     <Link to="/greeting">
       <button type="submit" className="User">
         Login / Creat Account
