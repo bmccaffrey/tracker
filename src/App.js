@@ -5,6 +5,7 @@ import LoginPage from './LoginPage';
 import Greeting from './Greeting';
 import Header from './Header';
 import Dashboard from './Dashboard';
+import Tracking from './Tracking';
 
 const App = () => (
   <Router>
@@ -14,6 +15,7 @@ const App = () => (
         <Route exact path="/" component={LoginPage} />
         <Route path="/greeting" component={Greeting} />
         <Route path="/dashboard" component={Dashboard} />
+        <Route path="/tracking" component={Tracking} />
       </Switch>
     </div>
   </Router>
