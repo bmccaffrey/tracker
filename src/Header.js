@@ -2,16 +2,16 @@ import React, { Component } from 'react';
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 import logo from './logo.svg';
+import Hamburger from './Hamburger';
 
 const Header = () => (
   <Link to="/">
     <Banner className="App-header">
-      <div>
-        <Logo src={logo} className="App-logo" alt="logo" />
-        <Title className="App-title">
+      <Logo src={logo} className="App-logo" alt="logo" />
+      <Title className="App-title">
 Welcome to React
-        </Title>
-      </div>
+      </Title>
+      <Hamburger />
     </Banner>
   </Link>
 );
@@ -21,17 +21,12 @@ export default Header;
 const Banner = styled.header`
   background: black;
   display: flex;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-  > div {
-    width: 100%;
-    justify-content: center;
-  }
 `;
 const Logo = styled.img`
   height: 50px;
   width: 50px;
-  float: left;
 `;
 
 const Title = styled.h1`
