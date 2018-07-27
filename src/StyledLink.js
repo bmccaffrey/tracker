@@ -15,5 +15,3 @@ const StyledLink = styled(Link)`
 `;
 
 export default StyledLink;
-
-// export default props => <StyledLink {...props} />;
