@@ -37,6 +37,9 @@ class Greeting extends Component {
       key: this.state.key + 1,
     });
   };
+  clear = () => {
+    this.setState({ value: '' });
+  };
 
   render() {
     return (
@@ -46,8 +49,7 @@ class Greeting extends Component {
         <button type="submit" onClick={this.submit}>
           Track
         </button>
-
-        <button>Clear</button>
+        <button onClick={this.clear}>Clear</button>
       </div>
     );
   }
