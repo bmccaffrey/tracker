@@ -22,11 +22,23 @@ class Greeting extends Component {
     console.log(this.state.value);
   };
 
+  submit = () => {
+    this.setState({
+      message: (
+        <div>
+          <h1>Alright!</h1>
+          <h2>We'll track your {this.state.value} for you!</h2>
+          <h3>Want to track anything else?</h3>
+        </div>
+      ),
+    });
+  };
+
   render() {
     return (
       <div>
         <Header />
-        {message}
+        {this.state.message}
         <input type="text" value={this.state.value} onInput={this.handleInput} />
         <button type="submit" onClick={this.submit}>
           Track
