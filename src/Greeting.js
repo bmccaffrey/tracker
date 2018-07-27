@@ -41,7 +41,6 @@ class Greeting extends Component {
   render() {
     return (
       <div>
-        <Header />
         {this.state.message}
         <input type="text" value={this.state.value} onInput={this.handleInput} />
         <button type="submit" onClick={this.submit}>

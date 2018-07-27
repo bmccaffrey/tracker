@@ -5,7 +5,7 @@ import Login from './Login';
 
 const LoginPage = () => (
   <AppGrid className="App">
-    <Header />
+    <div />
     <Login />
   </AppGrid>
 );
