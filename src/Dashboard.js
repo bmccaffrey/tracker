@@ -1,3 +1,4 @@
+/* eslint react/jsx-one-expression-per-line: 0 */
 import React from 'react';
 import styled from 'styled-components';
 import {
@@ -8,27 +9,19 @@ import avatar from './avatar.svg';
 const Dashboard = () => (
   <div>
     <ProfilePicture src={avatar} alt="" />
-    <ProfileName>
-Your Name Here!
-    </ProfileName>
+    <ProfileName>Your Name Here!</ProfileName>
     <hr />
-    <p>
-Forecast
-    </p>
+    <p>Forecast</p>
     <hr />
-    <p>
-Streaks
-    </p>
+    <p>Streaks</p>
     <hr />
-    <p>
-Achievements
-    </p>
+    <p>Achievements</p>
     <hr />
     <Link to="/tracking">
-      <p>
-Currently Tracking
-      </p>
+      <p>Currently Tracking</p>
     </Link>
+    <hr />
+    <p>Analytics &amp; Insights</p>
   </div>
 );
 
