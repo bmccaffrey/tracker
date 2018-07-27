@@ -1,12 +1,15 @@
 import React from 'react';
 import styled from 'styled-components';
+import { Link } from 'react-router-dom';
 
 const Hamburger = () => (
-  <Burger>
-    <div />
-    <div />
-    <div />
-  </Burger>
+  <Link to="/dashboard">
+    <Burger>
+      <div />
+      <div />
+      <div />
+    </Burger>
+  </Link>
 );
 
 export default Hamburger;
