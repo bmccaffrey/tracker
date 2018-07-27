@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Header from './Header';
+import { Link } from 'react-router-dom';
 
 class Greeting extends Component {
   constructor(props) {
@@ -50,6 +50,10 @@ class Greeting extends Component {
           Track
         </button>
         <button onClick={this.clear}>Clear</button>
+        <p>Finished?</p>
+        <Link to="/dashboard">
+          <p>&#8627;</p>
+        </Link>
       </div>
     );
   }
