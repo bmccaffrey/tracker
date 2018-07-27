@@ -8,6 +8,22 @@ const Dashboard = () => (
     <ProfileName>
 Your Name Here!
     </ProfileName>
+    <hr />
+    <p>
+Forecast
+    </p>
+    <hr />
+    <p>
+Streaks
+    </p>
+    <hr />
+    <p>
+Achievements
+    </p>
+    <hr />
+    <p>
+Currently Tracking
+    </p>
   </div>
 );
 
