@@ -1,10 +1,10 @@
 import React from 'react';
 import styled from 'styled-components';
-import Avatar from './Avatar.svg';
+import avatar from './avatar.svg';
 
 const Dashboard = () => (
   <div>
-    <ProfilePicture src={Avatar} alt="" />
+    <ProfilePicture src={avatar} alt="" />
     <ProfileName>
 Your Name Here!
     </ProfileName>
@@ -30,8 +30,10 @@ Currently Tracking
 export default Dashboard;
 
 const ProfilePicture = styled.img`
-  height: 50px;
   float: left;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
   // background-color: black;
 `;
 const ProfileName = styled.h1`
