@@ -44,9 +44,9 @@ export default class Greeting extends Component {
 
   render() {
     return (
-      <div>
+      <Container>
         {this.state.message}
-        <input type="text" value={this.state.value} onInput={this.handleInput} />
+        <input type="text" value={this.state.value} onInput={this.handleInput} className="track" />
         <button type="submit" onClick={this.submit}>
           Track
         </button>
@@ -55,7 +55,7 @@ export default class Greeting extends Component {
         <StyledLink to="/dashboard">
           <Arrow>&#8627;</Arrow>
         </StyledLink>
-      </div>
+      </Container>
     );
   }
 }
@@ -63,4 +63,19 @@ export default class Greeting extends Component {
 const Arrow = styled.p`
   font-size: 2em;
   margin: 0;
+`;
+const Container = styled.div`
+.track {
+  background: #eee;
+  border: 0;
+  border-radius: 10px;
+  color: #444;
+  height: 30px;
+  margin-top: 25px;
+  padding: 0;
+  text-align: center;
+  width: 100%;
+  ::-webkit-input-placeholder {
+    color: #444;
+  }
 `;
