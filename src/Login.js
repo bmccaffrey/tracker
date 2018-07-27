@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
 import styled from 'styled-components';
+import StyledLink from './StyledLink';
 
 const Login = () => (
   <Fields>
@@ -15,11 +15,11 @@ const Login = () => (
     <Forget>
 Forgot password?
     </Forget>
-    <Link to="/greeting">
+    <StyledLink to="/greeting">
       <button type="submit" className="User">
         Login / Creat Account
       </button>
-    </Link>
+    </StyledLink>
   </Fields>
 );
 

@@ -2,9 +2,7 @@
 /* eslint react/button-has-type: 0 */
 import React from 'react';
 import styled from 'styled-components';
-import {
-  BrowserRouter as Router, Route, Switch, Link,
-} from 'react-router-dom';
+import StyledLink from './StyledLink';
 import avatar from './avatar.svg';
 
 const Dashboard = () => (
@@ -18,13 +16,13 @@ const Dashboard = () => (
     <hr />
     <p>Achievements</p>
     <hr />
-    <Link to="/tracking">
+    <StyledLink to="/tracking">
       <p>Currently Tracking</p>
-    </Link>
+    </StyledLink>
     <hr />
-    <Link to="/analytics">
+    <StyledLink to="/analytics">
       <p>Analytics &amp; Insights</p>
-    </Link>
+    </StyledLink>
   </div>
 );
 

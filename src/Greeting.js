@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
 import styled from 'styled-components';
+import StyledLink from './StyledLink';
 
 export default class Greeting extends Component {
   constructor(props) {
@@ -52,9 +52,9 @@ export default class Greeting extends Component {
         </button>
         <button onClick={this.clear}>Clear</button>
         <p>Finished?</p>
-        <Link to="/dashboard">
+        <StyledLink to="/dashboard">
           <Arrow>&#8627;</Arrow>
-        </Link>
+        </StyledLink>
       </div>
     );
   }

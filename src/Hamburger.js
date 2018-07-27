@@ -1,15 +1,15 @@
 import React from 'react';
 import styled from 'styled-components';
-import { Link } from 'react-router-dom';
+import StyledLink from './StyledLink';
 
 const Hamburger = () => (
-  <Link to="/dashboard">
+  <StyledLink to="/dashboard">
     <Burger>
       <div />
       <div />
       <div />
     </Burger>
-  </Link>
+  </StyledLink>
 );
 
 export default Hamburger;

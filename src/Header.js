@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
-import { Link } from 'react-router-dom';
+import StyledLink from './StyledLink';
 import logo from './logo.svg';
 import Hamburger from './Hamburger';
 
 const Header = () => (
-  <Link to="/">
+  <StyledLink to="/">
     <Banner className="App-header">
       <Logo src={logo} className="App-logo" alt="logo" />
       <Title className="App-title">
@@ -13,7 +13,7 @@ Welcome to React
       </Title>
       <Hamburger />
     </Banner>
-  </Link>
+  </StyledLink>
 );
 
 export default Header;
