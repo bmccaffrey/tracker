@@ -23,6 +23,7 @@ class Greeting extends Component {
   };
 
   submit = () => {
+    localStorage.setItem('key', this.state.value);
     this.setState({
       message: (
         <div>
