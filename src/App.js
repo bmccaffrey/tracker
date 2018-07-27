@@ -6,6 +6,7 @@ import Greeting from './Greeting';
 import Header from './Header';
 import Dashboard from './Dashboard';
 import Tracking from './Tracking';
+import Analytics from './Analytics';
 
 const App = () => (
   <Router>
@@ -16,6 +17,8 @@ const App = () => (
         <Route path="/greeting" component={Greeting} />
         <Route path="/dashboard" component={Dashboard} />
         <Route path="/tracking" component={Tracking} />
+        <Route path="/analytics" component={Analytics} />
+        {/* <Route path="/" component={} /> */}
       </Switch>
     </div>
   </Router>
