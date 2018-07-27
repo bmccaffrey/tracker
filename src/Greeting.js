@@ -14,6 +14,7 @@ class Greeting extends Component {
           <p>What would you like to start tracking?</p>
         </div>
       ),
+      key: 0,
     };
   }
 
@@ -23,7 +24,7 @@ class Greeting extends Component {
   };
 
   submit = () => {
-    localStorage.setItem('key', this.state.value);
+    localStorage.setItem(`key${this.state.key}`, this.state.value);
     this.setState({
       message: (
         <div>
@@ -33,6 +34,7 @@ class Greeting extends Component {
         </div>
       ),
       value: '',
+      key: this.state.key + 1,
     });
   };
 
