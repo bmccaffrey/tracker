@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
+import styled from 'styled-components';
 
 export default class Greeting extends Component {
   constructor(props) {
@@ -52,9 +53,14 @@ export default class Greeting extends Component {
         <button onClick={this.clear}>Clear</button>
         <p>Finished?</p>
         <Link to="/dashboard">
-          <p>&#8627;</p>
+          <Arrow>&#8627;</Arrow>
         </Link>
       </div>
     );
   }
 }
+
+const Arrow = styled.p`
+  font-size: 2em;
+  margin: 0;
+`;
