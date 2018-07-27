@@ -1,9 +1,13 @@
 import React from 'react';
+import Avatar from './Avatar.svg';
 
 const Dashboard = () => (
-  <h1>
-Dashboard
-  </h1>
+  <div>
+    <img src={Avatar} alt="" />
+    <h1>
+Welcome to your Dashboard!
+    </h1>
+  </div>
 );
 
 export default Dashboard;
