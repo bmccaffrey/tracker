@@ -31,6 +31,7 @@ class Greeting extends Component {
           <h3>Want to track anything else?</h3>
         </div>
       ),
+      value: '',
     });
   };
 
