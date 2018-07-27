@@ -1,9 +1,10 @@
 import React from 'react';
+import styled from 'styled-components';
 import Avatar from './Avatar.svg';
 
 const Dashboard = () => (
   <div>
-    <img src={Avatar} alt="" />
+    <ProfilePicture src={Avatar} alt="" />
     <h1>
 Welcome to your Dashboard!
     </h1>
@@ -11,3 +12,7 @@ Welcome to your Dashboard!
 );
 
 export default Dashboard;
+
+const ProfilePicture = styled.img`
+  height: 60px;
+`;
