@@ -1,0 +1,14 @@
+
+<svg width="42px" height="51px" viewBox="0 0 42 51" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 51.1 (57501) - http://www.bohemiancoding.com/sketch -->
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Welcome" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Mobile-Portrait" transform="translate(-224.000000, -273.000000)" fill="#D8D8D8" fill-rule="nonzero">
+            <g id="Group-2" transform="translate(225.000000, 274.000000)">
+                <path d="M0,39.2804159 L0,29.8649405 C1.06715871,27.7280078 2.00141789,26.3213365 2.80277755,25.6449263 C3.60413721,24.9685162 4.98599092,24.4202074 6.94833868,24 L33.0220704,24 C35.2706874,24.4277224 36.7787264,24.9760311 37.5461874,25.6449263 C38.3136484,26.3138215 39.0486679,27.7204929 39.751246,29.8649405 L39.751246,39.5062532 L33.5581818,44.558645 L33.5581818,30.5688389 L31.5177301,30.5688389 L31.5177301,45.8849541 L19.875623,48.6379963 L8.60572063,45.8849541 L8.60572063,30.5688389 L6.50783952,30.5688389 L6.50783952,44.558645 L0,39.2804159 Z" id="Path-2" stroke="#9B9B9B"></path>
+                <ellipse id="Oval" stroke="#979797" cx="19.7054795" cy="10.8552632" rx="12.7054795" ry="10.8552632"></ellipse>
+            </g>
+        </g>
+    </g>
+</svg>
