@@ -21,7 +21,10 @@ const Dashboard = () => (
       <p>Currently Tracking</p>
     </Link>
     <hr />
-    <p>Analytics &amp; Insights</p>
+
+    <Link to="/analytics">
+      <p>Analytics &amp; Insights</p>
+    </Link>
   </div>
 );
 
