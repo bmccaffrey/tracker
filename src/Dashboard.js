@@ -1,4 +1,5 @@
 /* eslint react/jsx-one-expression-per-line: 0 */
+/* eslint react/button-has-type: 0 */
 import React from 'react';
 import styled from 'styled-components';
 import {
@@ -21,7 +22,6 @@ const Dashboard = () => (
       <p>Currently Tracking</p>
     </Link>
     <hr />
-
     <Link to="/analytics">
       <p>Analytics &amp; Insights</p>
     </Link>
