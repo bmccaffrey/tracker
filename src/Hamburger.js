@@ -3,6 +3,13 @@ import styled from 'styled-components';
 import StyledLink from './StyledLink';
 
 export default class Hamburger extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      on: false,
+    };
+  }
+
   render() {
     return (
       <StyledLink to="/dashboard">
