@@ -1,7 +1,7 @@
 /* eslint react/jsx-one-expression-per-line: 0 */
 import React from 'react';
 import styled from 'styled-components';
-import { items } from './Tracking';
+import { Items } from './Tracking';
 import Tracked from './Tracked';
 
 // FIXME: -- allow user to select which ones to compare
@@ -11,7 +11,7 @@ const Analytics = () => (
     <h1 style={{ marginBottom: '0px' }}>Let&apos;s analyze</h1>
     <StyledH1>&amp; compare</StyledH1>
     <h2>and see if we can&apos;t come up with some insights...</h2>
-    {items.map(item => <Tracked name={item} />)}
+    {Items.map(item => <Tracked name={item} />)}
   </Container>
 );
 

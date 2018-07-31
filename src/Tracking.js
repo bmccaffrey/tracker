@@ -10,9 +10,9 @@ import Tracked from './Tracked';
 // FIXME: -- Tracked.js could be conflated here
 
 // iterate over localStorage and push objects to items array
-const items = [];
+export const Items = [];
 for (let i = 0; i < localStorage.length; i++) {
-  items.push(localStorage[`key${i}`]);
+  Items.push(localStorage[`key${i}`]);
 }
 
 // pass each storage object to Tracked's props.name
@@ -21,7 +21,7 @@ const Tracking = () => (
   <div>
     <h1>Alright!</h1>
     <h2>We're currently tracking your:</h2>
-    {items.map(item => <Tracked name={item} />)}
+    {Items.map(item => <Tracked name={item} />)}
   </div>
 );
 
