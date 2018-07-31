@@ -4,19 +4,14 @@ import styled from 'styled-components';
 
 const Analytics = () => (
   <div>
-    {/* <h1>
-      Let&apos;s analyze<br />&amp; compare
-    </h1> */}
     <h1 style={{ marginBottom: '0px' }}>Let&apos;s analyze</h1>
-    <Intro>&amp; compare</Intro>
+    <StyledH1>&amp; compare</StyledH1>
     <h2>and see if we can&apos;t come up with some insights...</h2>
   </div>
 );
 
 export default Analytics;
-
-const Intro = styled.div`
+const StyledH1 = styled.h1`
   text-indent: 10%;
-  font-size: 2em;
-  font-weight: bold;
+  margin-top: 0px;
 `;
