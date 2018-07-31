@@ -9,7 +9,7 @@ const Tracked = props => (
 
 export default Tracked;
 
-const Container = styled.div`
+export const Container = styled.div`
   background: #eee;
   border: 0;
   border-radius: 10px;
