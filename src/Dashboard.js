@@ -14,6 +14,7 @@ import Accordion from './Accordion';
 // FIXME: -- no content for Achievements
 // TODO: -- wrap categories in Links
 // TODO: -- update App.js w/ new routes
+// TODO: -- set 5% margin;
 
 const Dashboard = () => (
   <Container>

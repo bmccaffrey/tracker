@@ -5,7 +5,7 @@ import { Items } from './Tracking';
 import { Container } from './Tracked';
 
 // FIXME: -- allow user to select which ones to compare
-// TODO: -- create checkboxes on "tracked" elements
+// TODO: -- write a compare function
 // FIXME: -- allow user to specify time range
 // TODO: -- create a <select> dropdown allow user to specify time range
 const Analytics = () => (
