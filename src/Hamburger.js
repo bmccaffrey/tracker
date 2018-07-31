@@ -22,7 +22,6 @@ const Burger = styled.div`
   > div {
     border: 1px solid #fff;
     width: 18px;
-    background-color: white;
     margin: 6px 0;
   }
 `;
