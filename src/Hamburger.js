@@ -5,9 +5,9 @@ import StyledLink from './StyledLink';
 const Hamburger = () => (
   <StyledLink to="/dashboard">
     <Burger>
-      <div />
-      <div />
-      <div />
+      <div className="line1" />
+      <div className="line2" />
+      <div className="line3" />
     </Burger>
   </StyledLink>
 );
