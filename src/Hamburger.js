@@ -1,18 +1,20 @@
-import React from 'react';
+import React, { Component } from 'react';
 import styled from 'styled-components';
 import StyledLink from './StyledLink';
 
-const Hamburger = () => (
-  <StyledLink to="/dashboard">
-    <Burger>
-      <div className="line1" />
-      <div className="line2" />
-      <div className="line3" />
-    </Burger>
-  </StyledLink>
-);
-
-export default Hamburger;
+export default class Hamburger extends Component {
+  render() {
+    return (
+      <StyledLink to="/dashboard">
+        <Burger>
+          <div className="line1" />
+          <div className="line2" />
+          <div className="line3" />
+        </Burger>
+      </StyledLink>
+    );
+  }
+}
 
 const Burger = styled.div`
   height: 24px;
@@ -23,5 +25,11 @@ const Burger = styled.div`
     border: 1px solid #fff;
     width: 18px;
     margin: 6px 0;
+  }
+  .line1 {
+  }
+  .line2 {
+  }
+  .line3 {
   }
 `;
