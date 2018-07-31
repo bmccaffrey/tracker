@@ -47,10 +47,10 @@ export default class Greeting extends Component {
       <Container>
         {this.state.message}
         <input type="text" value={this.state.value} onInput={this.handleInput} className="track" />
-        <button type="submit" onClick={this.submit}>
+        <StyledButton type="submit" onClick={this.submit}>
           Track
-        </button>
-        <button onClick={this.clear}>Clear</button>
+        </StyledButton>
+        <StyledButton onClick={this.clear}>Clear</StyledButton>
         <p>Finished?</p>
         <StyledLink to="/dashboard">
           <Arrow>&#8627;</Arrow>
@@ -84,4 +84,14 @@ margin: 5%;
 
 const StyledH2 = styled.h2`
   text-indent: 10%;
+`;
+
+const StyledButton = styled.button`
+  background-color: grey;
+  color: white;
+  margin-top: 15px;
+  margin-right: 5px;
+  height: 30px;
+  width: 75px;
+  border-radius: 10px;
 `;
