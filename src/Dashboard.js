@@ -4,7 +4,6 @@ import React from 'react';
 import styled from 'styled-components';
 import StyledLink from './StyledLink';
 import avatar from './avatar.svg';
-import Toggle from './Toggle';
 import Accordion from './Accordion';
 
 const Dashboard = () => (
