@@ -1,10 +1,8 @@
 /* eslint react/jsx-one-expression-per-line: 0 */
 /* eslint react/button-has-type: 0 */
 /* eslint no-unused-expressions: 0 */
-import React, { Component } from 'react';
+import React from 'react';
 import Toggle from './Toggle';
-
-// TODO: -- set default in case children.length <= 1
 
 const Accordion = (props) => {
   const { children } = props;
