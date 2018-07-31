@@ -24,14 +24,23 @@ const Dashboard = () => (
         <p>You currently have 0 streaks.</p>
       </Accordion>
       <hr />
-      <p>Achievements</p>
+      <Accordion>
+        <p>Achievements</p>
+        <p>You currently have 0 achievements.</p>
+      </Accordion>
       <hr />
       <StyledLink to="/tracking">
-        <p>Currently Tracking</p>
+        <Accordion>
+          <p>Currently Tracking</p>
+          <p>Placeholder Text!</p>
+        </Accordion>
       </StyledLink>
       <hr />
       <StyledLink to="/analytics">
-        <p>Analytics &amp; Insights</p>
+        <Accordion>
+          <p>Analytics &amp; Insights</p>
+          <p>Placeholder Text!</p>
+        </Accordion>
       </StyledLink>
     </div>
   </Container>
