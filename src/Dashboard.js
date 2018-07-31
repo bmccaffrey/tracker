@@ -5,6 +5,7 @@ import styled from 'styled-components';
 import StyledLink from './StyledLink';
 import avatar from './avatar.svg';
 import Toggle from './Toggle';
+import Accordion from './Accordion';
 
 const Dashboard = () => (
   <Container>
@@ -22,7 +23,10 @@ const Dashboard = () => (
         )}
       </Toggle>
       <hr />
-      <p>Streaks</p>
+      <Accordion>
+        <p>Streaks</p>
+        <p>You currently have 0 streaks.</p>
+      </Accordion>
       <hr />
       <p>Achievements</p>
       <hr />
