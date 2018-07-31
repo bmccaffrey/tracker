@@ -47,10 +47,12 @@ export default class Greeting extends Component {
       <Container>
         {this.state.message}
         <input type="text" value={this.state.value} onInput={this.handleInput} className="track" />
-        <StyledButton type="submit" onClick={this.submit}>
-          Track
-        </StyledButton>
-        <StyledButton onClick={this.clear}>Clear</StyledButton>
+        <FlexContainer>
+          <StyledButton type="submit" onClick={this.submit}>
+            Track
+          </StyledButton>
+          <StyledButton onClick={this.clear}>Clear</StyledButton>
+        </FlexContainer>
         <p>Finished?</p>
         <StyledLink to="/dashboard">
           <Arrow>&#8627;</Arrow>
@@ -94,4 +96,9 @@ const StyledButton = styled.button`
   height: 30px;
   width: 75px;
   border-radius: 10px;
+`;
+
+const FlexContainer = styled.div`
+  display: flex;
+  justify-content: flex-end;
 `;
