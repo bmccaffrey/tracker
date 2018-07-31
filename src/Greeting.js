@@ -65,6 +65,7 @@ const Arrow = styled.p`
   margin: 0;
 `;
 const Container = styled.div`
+margin: 5%;
 .track {
   background: #eee;
   border: 0;
