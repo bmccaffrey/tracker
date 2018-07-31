@@ -31,7 +31,8 @@ export default class Greeting extends Component {
         <div>
           <h1>Alright!</h1>
           <h2>We'll track your {this.state.value} for you!</h2>
-          <h3>Want to track anything else?</h3>
+          <hr />
+          <p>Want to track anything else?</p>
         </div>
       ),
       value: '',
