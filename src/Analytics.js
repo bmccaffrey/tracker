@@ -2,6 +2,9 @@
 import React from 'react';
 import styled from 'styled-components';
 
+// TODO: -- display currently tracked
+// FIXME: -- allow user to select which ones to compare
+// FIXME: -- allow user to specify time range
 const Analytics = () => (
   <Container>
     <h1 style={{ marginBottom: '0px' }}>Let&apos;s analyze</h1>
