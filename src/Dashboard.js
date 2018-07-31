@@ -14,14 +14,10 @@ const Dashboard = () => (
       <ProfileName>Your Name Here!</ProfileName>
     </div>
     <div>
-      <Toggle>
-        {({ on, toggle }) => (
-          <div>
-            <p onClick={toggle}>Forecast</p>
-            {on && <h1>test</h1>}
-          </div>
-        )}
-      </Toggle>
+      <Accordion>
+        <p>Forecast</p>
+        <p>Test</p>
+      </Accordion>
       <hr />
       <Accordion>
         <p>Streaks</p>
