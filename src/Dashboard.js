@@ -16,7 +16,7 @@ const Dashboard = () => (
     <div>
       <Accordion>
         <p>Forecast</p>
-        <p>Test</p>
+        <p>{new Date().toDateString()}</p>
       </Accordion>
       <hr />
       <Accordion>
