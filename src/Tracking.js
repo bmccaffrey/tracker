@@ -2,9 +2,6 @@
 import React from 'react';
 import Tracked from './Tracked';
 
-// FIXME: -- allow user to select which to compare
-// TODO: -- create input buttons on "tracked" elements
-// TODO: -- create input field to allow user to specify time range
 // FIXME: -- need a way to chart data
 // TODO: -- Chart.js ??
 // FIXME: -- Tracked.js could be conflated here
