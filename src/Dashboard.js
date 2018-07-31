@@ -29,7 +29,7 @@ const Dashboard = () => (
       <hr />
       <Accordion>
         <p>Streaks</p>
-        <p>You currently have 0 streaks.</p>
+        {/* <p>You currently have 0 streaks.</p> */}
       </Accordion>
       <hr />
       <Accordion>

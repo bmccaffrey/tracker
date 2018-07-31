@@ -7,8 +7,13 @@ import Toggle from './Toggle';
 
 const Accordion = (props) => {
   const { children } = props;
-  const title = children[0];
-  const Hide = children.slice(1);
+  let title;
+  let hide;
+  children.length >= 2 ? (title = children[0]) : (title = children);
+  children.length >= 2
+    ? (hide = children.slice(1))
+    : (hide = 'Oops, something seems to be missing here!');
+
   return (
     <Toggle>
       {({ on, toggle }) => (
@@ -16,7 +21,7 @@ const Accordion = (props) => {
           <p onClick={toggle} onKeyPress={toggle}>
             {title}
           </p>
-          {on && <p>{Hide}</p>}
+          {on && <p>{hide}</p>}
         </div>
       )}
     </Toggle>
