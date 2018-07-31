@@ -15,7 +15,7 @@ const Analytics = () => (
     <h2>and see if we can&apos;t come up with some insights...</h2>
     {Items.map(item => (
       <Container>
-        <input type="checkbox" name="" id="" />
+        <Checkbox type="checkbox" name="" id="" />
         <label>{item}</label>
       </Container>
     ))}
@@ -29,4 +29,14 @@ const StyledH1 = styled.h1`
 `;
 const MarginContainer = styled.div`
   margin: 5%;
+`;
+const Checkbox = styled.input.attrs({
+  type: 'checkbox',
+})`
+  height: 20px;
+  width: 20px;
+  float: left;
+  position: relative;
+  left: 25px;
+  top: 2px;
 `;
