@@ -4,6 +4,7 @@ import React from 'react';
 import styled from 'styled-components';
 import StyledLink from './StyledLink';
 import avatar from './avatar.svg';
+import Toggle from './Toggle';
 
 const Dashboard = () => (
   <Container>
