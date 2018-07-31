@@ -7,16 +7,31 @@ export default class Hamburger extends Component {
     super(props);
     this.state = {
       on: false,
+      class: '',
     };
   }
+
+  toggle = () => {
+    this.setState({
+      on: !this.state.on,
+      class: 'line1',
+    });
+    if (this.state.on) {
+      this.setState({ class: 'line1' });
+    } else {
+      this.setState({
+        class: '',
+      });
+    }
+  };
 
   render() {
     return (
       <StyledLink to="/dashboard">
-        <Burger>
-          <div className="line1" />
-          <div className="line2" />
-          <div className="line3" />
+        <Burger onClick={this.toggle}>
+          <div className={this.state.class} />
+          <div className={this.state.class} />
+          <div className={this.state.class} />
         </Burger>
       </StyledLink>
     );
@@ -34,6 +49,7 @@ const Burger = styled.div`
     margin: 6px 0;
   }
   .line1 {
+    border-color: orange;
   }
   .line2 {
   }
