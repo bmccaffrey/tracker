@@ -1,5 +1,6 @@
 /* eslint react/jsx-one-expression-per-line: 0 */
 /* eslint react/button-has-type: 0 */
+/* eslint no-unused-expressions: 0 */
 import React, { Component } from 'react';
 import Toggle from './Toggle';
 
