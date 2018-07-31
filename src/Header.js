@@ -9,7 +9,7 @@ const Header = () => (
     <Banner className="App-header">
       <Logo src={logo} className="App-logo" alt="logo" />
       <Title className="App-title">
-Welcome to React
+Tracker
       </Title>
       <Hamburger />
     </Banner>
