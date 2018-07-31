@@ -10,7 +10,7 @@ export default class Greeting extends Component {
       message: (
         <div>
           <h1>Hiya!</h1>
-          <h2>Let's get tracking!</h2>
+          <StyledH2>Let's get tracking!</StyledH2>
           <hr />
           <p>What would you like to start tracking?</p>
         </div>
@@ -30,7 +30,7 @@ export default class Greeting extends Component {
       message: (
         <div>
           <h1>Alright!</h1>
-          <h2>We'll track your {this.state.value} for you!</h2>
+          <StyledH2>We'll track your {this.state.value} for you!</StyledH2>
           <hr />
           <p>Want to track anything else?</p>
         </div>
@@ -65,6 +65,7 @@ const Arrow = styled.p`
   font-size: 2em;
   margin: 0;
 `;
+
 const Container = styled.div`
 margin: 5%;
 .track {
@@ -80,4 +81,8 @@ margin: 5%;
   ::-webkit-input-placeholder {
     color: #444;
   }
+`;
+
+const StyledH2 = styled.h2`
+  text-indent: 10%;
 `;
