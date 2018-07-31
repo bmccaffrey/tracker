@@ -11,7 +11,9 @@ const Accordion = (props) => {
     <Toggle>
       {({ on, toggle }) => (
         <div>
-          <p onClick={toggle}>{title}</p>
+          <p onClick={toggle} onKeyPress={toggle}>
+            {title}
+          </p>
           {on && <p>{Hide}</p>}
         </div>
       )}
