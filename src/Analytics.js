@@ -9,7 +9,7 @@ import Tracked from './Tracked';
 // FIXME: -- allow user to specify time range
 // TODO: -- create a <select> dropdown allow user to specify time range
 const Analytics = () => (
-  <Container>
+  <MarginContainer>
     <h1 style={{ marginBottom: '0px' }}>Let&apos;s analyze</h1>
     <StyledH1>&amp; compare</StyledH1>
     <h2>and see if we can&apos;t come up with some insights...</h2>
@@ -19,7 +19,7 @@ const Analytics = () => (
         <label>{item}</label>
       </div>
     ))}
-  </Container>
+  </MarginContainer>
 );
 
 export default Analytics;
@@ -27,6 +27,6 @@ const StyledH1 = styled.h1`
   text-indent: 10%;
   margin-top: 0px;
 `;
-const Container = styled.div`
+const MarginContainer = styled.div`
   margin: 5%;
 `;
