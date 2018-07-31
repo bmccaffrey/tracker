@@ -1,5 +1,9 @@
 import React from 'react';
 
-const Tracked = () => <div />;
+const Tracked = props => (
+  <div>
+    {props.name}
+  </div>
+);
 
 export default Tracked;
