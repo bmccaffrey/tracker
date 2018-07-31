@@ -21,7 +21,6 @@ export default class Greeting extends Component {
 
   handleInput = e => {
     this.setState({ value: e.target.value });
-    console.log(this.state.value);
   };
 
   submit = () => {
