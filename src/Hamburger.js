@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import styled from 'styled-components';
 import StyledLink from './StyledLink';
 import './Hamburger.css';
 
@@ -16,13 +15,6 @@ export default class Hamburger extends Component {
     this.setState({
       on: !this.state.on,
     });
-    // if (this.state.on) {
-    //   this.setState({ class: 'container change' });
-    // } else {
-    //   this.setState({
-    //     class: 'container',
-    //   });
-    // }
   };
 
   render() {
