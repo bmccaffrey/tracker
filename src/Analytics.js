@@ -14,10 +14,10 @@ const Analytics = () => (
     <StyledH1>&amp; compare</StyledH1>
     <h2>and see if we can&apos;t come up with some insights...</h2>
     {Items.map(item => (
-      <div>
+      <Container>
         <input type="checkbox" name="" id="" />
         <label>{item}</label>
-      </div>
+      </Container>
     ))}
   </MarginContainer>
 );
