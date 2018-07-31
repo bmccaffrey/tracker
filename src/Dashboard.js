@@ -6,24 +6,27 @@ import StyledLink from './StyledLink';
 import avatar from './avatar.svg';
 
 const Dashboard = () => (
-  <div>
-    <ProfilePicture src={avatar} alt="" />
-    <ProfileName>Your Name Here!</ProfileName>
-    <hr />
-    <p>Forecast</p>
-    <hr />
-    <p>Streaks</p>
-    <hr />
-    <p>Achievements</p>
-    <hr />
-    <StyledLink to="/tracking">
-      <p>Currently Tracking</p>
-    </StyledLink>
-    <hr />
-    <StyledLink to="/analytics">
-      <p>Analytics &amp; Insights</p>
-    </StyledLink>
-  </div>
+  <Container>
+    <div>
+      <ProfilePicture src={avatar} alt="" />
+      <ProfileName>Your Name Here!</ProfileName>
+    </div>
+    <div>
+      <p>Forecast</p>
+      <hr />
+      <p>Streaks</p>
+      <hr />
+      <p>Achievements</p>
+      <hr />
+      <StyledLink to="/tracking">
+        <p>Currently Tracking</p>
+      </StyledLink>
+      <hr />
+      <StyledLink to="/analytics">
+        <p>Analytics &amp; Insights</p>
+      </StyledLink>
+    </div>
+  </Container>
 );
 
 export default Dashboard;
@@ -37,4 +40,10 @@ const ProfilePicture = styled.img`
 `;
 const ProfileName = styled.h1`
   text-align: center;
+`;
+const Container = styled.div`
+  display: grid;
+  grid-template-rows: 50px 1fr;
+  // row-gap: 20vh;
+  row-gap: 100px;
 `;
