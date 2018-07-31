@@ -2,6 +2,9 @@ import React, { Component } from 'react';
 import StyledLink from './StyledLink';
 import './Hamburger.css';
 
+// TODO: -- create Sidenav overlay
+// TODO: -- create Logout Icon
+// FIXME: -- unable to implement CSS transition w/o stylesheet
 export default class Hamburger extends Component {
   constructor(props) {
     super(props);

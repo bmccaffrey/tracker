@@ -3,6 +3,8 @@
 import React, { Component } from 'react';
 import Toggle from './Toggle';
 
+// TODO: -- set default in case children.length <= 1
+
 const Accordion = (props) => {
   const { children } = props;
   const title = children[0];

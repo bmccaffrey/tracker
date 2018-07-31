@@ -4,6 +4,9 @@ import StyledLink from './StyledLink';
 import logo from './logo.svg';
 import Hamburger from './Hamburger';
 
+// TODO: -- create icon
+// TODO: -- insert icon
+
 const Header = () => (
   <StyledLink to="/">
     <Banner className="App-header">

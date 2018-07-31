@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import Login from './Login';
 
+// TODO: -- add background image
 const LoginPage = () => (
   <AppGrid className="App">
     <div />

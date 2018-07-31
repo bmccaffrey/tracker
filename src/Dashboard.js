@@ -6,6 +6,15 @@ import StyledLink from './StyledLink';
 import avatar from './avatar.svg';
 import Accordion from './Accordion';
 
+// TODO: -- pull name from localStorage & insert into ProfileName
+// TODO: -- create "edit" icon for Avatar
+// TODO: -- create 7 Day Forecast
+// TODO: -- create Monthly Calendar
+// FIXME: -- no content for Streaks
+// FIXME: -- no content for Achievements
+// TODO: -- wrap categories in Links
+// TODO: -- update App.js w/ new routes
+
 const Dashboard = () => (
   <Container>
     <div>

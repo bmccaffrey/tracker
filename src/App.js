@@ -8,6 +8,8 @@ import Dashboard from './Dashboard';
 import Tracking from './Tracking';
 import Analytics from './Analytics';
 
+// TODO: -- import routes & components from Dashboard.js
+// FIXME: -- can't access certains routes w/o being logged in
 const App = () => (
   <Router>
     <div>

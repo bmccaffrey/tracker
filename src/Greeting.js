@@ -2,6 +2,9 @@ import React, { Component } from 'react';
 import styled from 'styled-components';
 import StyledLink from './StyledLink';
 
+// TODO: -- "track" button darkens on text input
+// TODO: -- add box-shadow to buttons
+// FIXME -- "Finished?" & Arrow need additional styling
 export default class Greeting extends Component {
   constructor(props) {
     super(props);

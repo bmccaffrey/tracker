@@ -2,6 +2,10 @@ import React, { Component } from 'react';
 import styled from 'styled-components';
 import StyledLink from './StyledLink';
 
+// TODO: -- store username in localStorage
+// TODO: -- store password in localStorage
+// TODO: -- set prop for LoggedIn
+// TODO: -- create a PasswordReset Component
 const Login = () => (
   <Fields>
     <input
