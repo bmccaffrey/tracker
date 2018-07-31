@@ -13,7 +13,12 @@ const Analytics = () => (
     <h1 style={{ marginBottom: '0px' }}>Let&apos;s analyze</h1>
     <StyledH1>&amp; compare</StyledH1>
     <h2>and see if we can&apos;t come up with some insights...</h2>
-    {Items.map(item => <Tracked name={item} />)}
+    {Items.map(item => (
+      <div>
+        <input type="checkbox" name="" id="" />
+        <label>{item}</label>
+      </div>
+    ))}
   </Container>
 );
 
