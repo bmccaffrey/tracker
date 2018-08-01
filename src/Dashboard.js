@@ -71,6 +71,7 @@ const ProfilePicture = styled.img`
 `;
 const ProfileName = styled.h1`
   text-align: center;
+  margin-bottom: 0px;
 `;
 const Container = styled.div`
   display: grid;
