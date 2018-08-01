@@ -22,8 +22,14 @@ const Tracking = () => (
     {Items.map(item => (
       <Accordion>
         <Tracked name={item} />
-        <input type="text" name="" id="" placeholder="Metric" />
-        <button>Add Metric</button>
+        <input
+          style={{ border: '1px solid black' }}
+          type="text"
+          name=""
+          id=""
+          placeholder="Metric"
+        />
+        <button style={{ border: '1px solid black' }}>Add Metric</button>
       </Accordion>
     ))}
   </div>
