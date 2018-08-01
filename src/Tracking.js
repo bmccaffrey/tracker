@@ -4,7 +4,7 @@ import styled from 'styled-components';
 
 // Items exported to Analytics.js
 // iterate over localStorage and push objects to items array
-export const Items = [];
+const Items = [];
 for (let i = 0; i < localStorage.length; i++) {
   Items.push(localStorage[`key${i}`]);
 }
@@ -23,10 +23,8 @@ const Tracking = () => (
   </div>
 );
 
-export default Tracking;
-
 // Container exported to Analytics.js
-export const Container = styled.div`
+const Container = styled.div`
   background: #eee;
   border: 0;
   border-radius: 10px;
@@ -38,3 +36,7 @@ export const Container = styled.div`
   text-indent: 10%;
   vertical-align: middle;
 `;
+
+export default Tracking;
+export { Container };
+export { Items };
