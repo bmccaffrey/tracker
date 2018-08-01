@@ -36,8 +36,15 @@ export default class Hamburger extends Component {
           {this.state.on && (
             <SideNav>
               <h1>Profile</h1>
-              <h1>Tracking</h1>
-              <h1>Analytics</h1>
+              <StyledLink to="/dashboard">
+                <h1>Dashboard</h1>
+              </StyledLink>
+              <StyledLink to="/tracking">
+                <h1>Tracking</h1>
+              </StyledLink>
+              <StyledLink to="/analytics">
+                <h1>Analytics</h1>
+              </StyledLink>
               <h1>Settings</h1>
               <h1>Logout</h1>
             </SideNav>
