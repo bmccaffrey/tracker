@@ -22,10 +22,10 @@ const Dashboard = () => (
     <div>
       <ProfilePicture src={avatar} alt="" />
       <ProfileName>Your Name Here!</ProfileName>
-      <button>
+      <StyledButton>
         <Edit src={edit} alt="" />
         Edit Picture
-      </button>
+      </StyledButton>
     </div>
     <div>
       <Accordion>
@@ -81,4 +81,10 @@ const Container = styled.div`
 const Edit = styled.img`
   height: 15px;
   width: 15px;
+`;
+const StyledButton = styled.button`
+  background: #eee;
+  color: #444;
+  padding: 5px;
+  text-align: center;
 `;
