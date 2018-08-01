@@ -1,12 +1,11 @@
 /* eslint react/jsx-one-expression-per-line: 0 */
 import React from 'react';
-import Tracked from './Tracked';
+import styled from 'styled-components';
 
-// FIXME: -- need a way to chart data
-// TODO: -- Chart.js ??
 // FIXME: -- Tracked.js could be conflated here
-
 // iterate over localStorage and push objects to items array
+const Tracked = props => <Container>{props.name}</Container>;
+
 export const Items = [];
 for (let i = 0; i < localStorage.length; i++) {
   Items.push(localStorage[`key${i}`]);
@@ -23,3 +22,16 @@ const Tracking = () => (
 );
 
 export default Tracking;
+
+export const Container = styled.div`
+  background: #eee;
+  border: 0;
+  border-radius: 10px;
+  color: #444;
+  height: 30px;
+  line-height: 30px;
+  margin-top: 25px;
+  padding: 0;
+  text-indent: 10%;
+  vertical-align: middle;
+`;
