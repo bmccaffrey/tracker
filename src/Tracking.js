@@ -22,6 +22,7 @@ const Tracking = () => (
     {Items.map(item => (
       <Accordion>
         <Tracked name={item} />
+        <input type="text" name="" id="" placeholder="Metric" />
       </Accordion>
     ))}
   </div>
