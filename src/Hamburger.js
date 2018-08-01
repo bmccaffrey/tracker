@@ -35,18 +35,26 @@ export default class Hamburger extends Component {
           <div className="line3" />
           {this.state.on && (
             <SideNav>
-              <h1>Profile</h1>
+              <StyledLink style={{ color: 'white' }} to="/dashboard">
+                <h1>Profile</h1>
+              </StyledLink>
+
               <StyledLink style={{ color: 'white' }} to="/dashboard">
                 <h1>Dashboard</h1>
               </StyledLink>
+
               <StyledLink style={{ color: 'white' }} to="/tracking">
                 <h1>Tracking</h1>
               </StyledLink>
               <StyledLink style={{ color: 'white' }} to="/analytics">
                 <h1>Analytics</h1>
               </StyledLink>
-              <h1>Settings</h1>
-              <h1>Logout</h1>
+              <StyledLink style={{ color: 'white' }} to="/dashboard">
+                <h1>Settings</h1>
+              </StyledLink>
+              <StyledLink style={{ color: 'white' }} to="/dashboard">
+                <h1>Logout</h1>
+              </StyledLink>
             </SideNav>
           )}
         </div>
