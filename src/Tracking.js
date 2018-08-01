@@ -1,8 +1,8 @@
 /* eslint react/jsx-one-expression-per-line: 0 */
 import React from 'react';
 import styled from 'styled-components';
+import Accordion from './Accordion';
 
-// Items exported to Analytics.js
 // iterate over localStorage and push objects to items array
 const Items = [];
 for (let i = 0; i < localStorage.length; i++) {
@@ -19,11 +19,14 @@ const Tracking = () => (
   <div>
     <h1>Alright!</h1>
     <h2>We're currently tracking your:</h2>
-    {Items.map(item => <Tracked name={item} />)}
+    {Items.map(item => (
+      <Accordion>
+        <Tracked name={item} />
+      </Accordion>
+    ))}
   </div>
 );
 
-// Container exported to Analytics.js
 const Container = styled.div`
   background: #eee;
   border: 0;
@@ -40,3 +43,4 @@ const Container = styled.div`
 export default Tracking;
 export { Container };
 export { Items };
+// Items & Container are exported to Analytics.js
