@@ -54,7 +54,7 @@ export default class Hamburger extends Component {
               </StyledLink>
               <StyledLink style={{ color: 'white' }} to="/dashboard">
                 <div>
-                  <img src={logout} alt="" />
+                  <Logout src={logout} alt="" />
                   <h1>Logout</h1>
                 </div>
               </StyledLink>
@@ -78,4 +78,9 @@ const SideNav = styled.div`
   overflow-x: hidden;
   transition: 0.5s;
   padding-top: 60px;
+`;
+const Logout = styled.img`
+  float: left;
+  height: 35px;
+  margin-right: 15px;
 `;
