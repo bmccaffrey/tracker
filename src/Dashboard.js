@@ -78,6 +78,7 @@ const Container = styled.div`
   display: grid;
   grid-template-rows: 55px 1fr;
   row-gap: 100px;
+  margin: 5%;
 `;
 const Edit = styled.img`
   height: 15px;
