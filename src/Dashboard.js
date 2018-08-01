@@ -5,6 +5,7 @@ import styled from 'styled-components';
 import StyledLink from './StyledLink';
 import avatar from './avatar.svg';
 import Accordion from './Accordion';
+import edit from './edit.svg';
 
 // TODO: -- pull name from localStorage & insert into ProfileName
 // TODO: -- create "edit" icon for Avatar
@@ -21,6 +22,7 @@ const Dashboard = () => (
     <div>
       <ProfilePicture src={avatar} alt="" />
       <ProfileName>Your Name Here!</ProfileName>
+      <img src={edit} alt="" />
     </div>
     <div>
       <Accordion>
