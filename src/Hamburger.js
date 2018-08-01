@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import StyledLink from './StyledLink';
+import styled from 'styled-components';
 import './Hamburger.css';
 
 // TODO: -- create Sidenav overlay
@@ -32,8 +33,23 @@ export default class Hamburger extends Component {
           <div className="line1" />
           <div className="line2" />
           <div className="line3" />
+          {this.state.on && <SideNav />}
         </div>
       </StyledLink>
     );
   }
 }
+
+const SideNav = styled.div`
+  height: 100%;
+  width: 250px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  right: 0;
+  background: black;
+  opacity: 0.5;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+`;
