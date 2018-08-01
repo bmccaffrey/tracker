@@ -60,4 +60,7 @@ const SideNav = styled.div`
   overflow-x: hidden;
   transition: 0.5s;
   padding-top: 60px;
+  > h1 {
+    color: white;
+  }
 `;
