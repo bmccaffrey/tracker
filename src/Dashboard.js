@@ -8,7 +8,6 @@ import Accordion from './Accordion';
 import edit from './edit.svg';
 
 // TODO: -- pull name from localStorage & insert into ProfileName
-// TODO: -- create "edit" icon for Avatar
 // TODO: -- create 7 Day Forecast
 // TODO: -- create Monthly Calendar
 // FIXME: -- no content for Streaks
@@ -76,7 +75,6 @@ const ProfileName = styled.h1`
 const Container = styled.div`
   display: grid;
   grid-template-rows: 50px 1fr;
-  // row-gap: 20vh;
   row-gap: 100px;
 `;
 const Edit = styled.img`
