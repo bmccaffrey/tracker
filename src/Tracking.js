@@ -2,17 +2,19 @@
 import React from 'react';
 import styled from 'styled-components';
 
-// FIXME: -- Tracked.js could be conflated here
+// Items exported to Analytics.js
 // iterate over localStorage and push objects to items array
-const Tracked = props => <Container>{props.name}</Container>;
-
 export const Items = [];
 for (let i = 0; i < localStorage.length; i++) {
   Items.push(localStorage[`key${i}`]);
 }
 
-// pass each storage object to Tracked's props.name
-// Tracked returns a styled div for each object
+/*
+Pass each storage object to Tracked's props.name
+Returning a styled div for each object
+*/
+const Tracked = props => <Container>{props.name}</Container>;
+
 const Tracking = () => (
   <div>
     <h1>Alright!</h1>
@@ -23,6 +25,7 @@ const Tracking = () => (
 
 export default Tracking;
 
+// Container exported to Analytics.js
 export const Container = styled.div`
   background: #eee;
   border: 0;
