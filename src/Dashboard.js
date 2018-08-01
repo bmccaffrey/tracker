@@ -67,7 +67,7 @@ const ProfilePicture = styled.img`
   width: 50px;
   height: 50px;
   border-radius: 50%;
-  // background-color: black;
+  background-color: #56d5fa;
 `;
 const ProfileName = styled.h1`
   text-align: center;
