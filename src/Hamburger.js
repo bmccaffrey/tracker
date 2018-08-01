@@ -53,7 +53,10 @@ export default class Hamburger extends Component {
                 <h1>Settings</h1>
               </StyledLink>
               <StyledLink style={{ color: 'white' }} to="/dashboard">
-                <h1>Logout</h1>
+                <div>
+                  <img src={logout} alt="" />
+                  <h1>Logout</h1>
+                </div>
               </StyledLink>
             </SideNav>
           )}
