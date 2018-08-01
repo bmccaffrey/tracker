@@ -22,7 +22,10 @@ const Dashboard = () => (
     <div>
       <ProfilePicture src={avatar} alt="" />
       <ProfileName>Your Name Here!</ProfileName>
-      <Edit src={edit} alt="" />
+      <button>
+        <Edit src={edit} alt="" />
+        Edit Picture
+      </button>
     </div>
     <div>
       <Accordion>
