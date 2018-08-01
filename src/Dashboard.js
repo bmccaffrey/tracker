@@ -15,6 +15,7 @@ import edit from './edit.svg';
 // TODO: -- wrap categories in Links
 // TODO: -- update App.js w/ new routes
 // TODO: -- set 5% margin;
+// TODO: -- create editPicture function
 
 const Dashboard = () => (
   <Container>
@@ -67,6 +68,7 @@ const ProfilePicture = styled.img`
   height: 50px;
   border-radius: 50%;
   background-color: #56d5fa;
+  margin-top: 5px;
 `;
 const ProfileName = styled.h1`
   text-align: center;
@@ -74,7 +76,7 @@ const ProfileName = styled.h1`
 `;
 const Container = styled.div`
   display: grid;
-  grid-template-rows: 50px 1fr;
+  grid-template-rows: 55px 1fr;
   row-gap: 100px;
 `;
 const Edit = styled.img`
