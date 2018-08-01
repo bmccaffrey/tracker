@@ -22,7 +22,7 @@ const Dashboard = () => (
     <div>
       <ProfilePicture src={avatar} alt="" />
       <ProfileName>Your Name Here!</ProfileName>
-      <img src={edit} alt="" />
+      <Edit src={edit} alt="" />
     </div>
     <div>
       <Accordion>
@@ -74,4 +74,8 @@ const Container = styled.div`
   grid-template-rows: 50px 1fr;
   // row-gap: 20vh;
   row-gap: 100px;
+`;
+const Edit = styled.img`
+  height: 15px;
+  width: 15px;
 `;
