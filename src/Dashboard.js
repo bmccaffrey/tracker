@@ -14,7 +14,6 @@ import edit from './edit.svg';
 // FIXME: -- no content for Achievements
 // TODO: -- wrap categories in Links
 // TODO: -- update App.js w/ new routes
-// TODO: -- set 5% margin;
 // TODO: -- create editPicture function
 
 const Dashboard = () => (
