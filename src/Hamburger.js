@@ -4,7 +4,11 @@ import styled from 'styled-components';
 import './Hamburger.css';
 import logout from './logout.svg';
 
-// TODO: -- create Logout Icon
+// TODO: -- create Profile icon
+// TODO: -- create Dashboard icon
+// TODO: -- create Tracking icon
+// TODO: -- create Analytics icon
+// TODO: -- create Settings icon
 // FIXME: -- unable to implement CSS transition w/o stylesheet
 export default class Hamburger extends Component {
   constructor(props) {
@@ -46,12 +50,15 @@ export default class Hamburger extends Component {
               <StyledLink style={{ color: 'white' }} to="/tracking">
                 <h1>Tracking</h1>
               </StyledLink>
+
               <StyledLink style={{ color: 'white' }} to="/analytics">
                 <h1>Analytics</h1>
               </StyledLink>
+
               <StyledLink style={{ color: 'white' }} to="/dashboard">
                 <h1>Settings</h1>
               </StyledLink>
+              
               <StyledLink style={{ color: 'white' }} to="/dashboard">
                 <div>
                   <Logout src={logout} alt="" />
