@@ -90,4 +90,8 @@ const StyledButton = styled.button`
   color: #444;
   padding: 5px;
   text-align: center;
+  border: 0;
+  position: relative;
+  left: 10px;
+  margin-top: 5px;
 `;
