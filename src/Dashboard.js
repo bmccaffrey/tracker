@@ -81,6 +81,8 @@ const Container = styled.div`
 const Edit = styled.img`
   height: 15px;
   width: 15px;
+  margin-right: 5px;
+  float: left;
 `;
 const StyledButton = styled.button`
   background: #eee;
