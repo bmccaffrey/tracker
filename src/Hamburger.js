@@ -33,7 +33,15 @@ export default class Hamburger extends Component {
           <div className="line1" />
           <div className="line2" />
           <div className="line3" />
-          {this.state.on && <SideNav />}
+          {this.state.on && (
+            <SideNav>
+              <h1>Profile</h1>
+              <h1>Tracking</h1>
+              <h1>Analytics</h1>
+              <h1>Settings</h1>
+              <h1>Logout</h1>
+            </SideNav>
+          )}
         </div>
       </StyledLink>
     );
@@ -48,7 +56,7 @@ const SideNav = styled.div`
   top: 0;
   right: 0;
   background: black;
-  opacity: 0.5;
+  opacity: 0.9;
   overflow-x: hidden;
   transition: 0.5s;
   padding-top: 60px;
