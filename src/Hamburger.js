@@ -36,13 +36,13 @@ export default class Hamburger extends Component {
           {this.state.on && (
             <SideNav>
               <h1>Profile</h1>
-              <StyledLink to="/dashboard">
+              <StyledLink style={{ color: 'white' }} to="/dashboard">
                 <h1>Dashboard</h1>
               </StyledLink>
-              <StyledLink to="/tracking">
+              <StyledLink style={{ color: 'white' }} to="/tracking">
                 <h1>Tracking</h1>
               </StyledLink>
-              <StyledLink to="/analytics">
+              <StyledLink style={{ color: 'white' }} to="/analytics">
                 <h1>Analytics</h1>
               </StyledLink>
               <h1>Settings</h1>
