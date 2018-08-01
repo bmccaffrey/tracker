@@ -23,6 +23,7 @@ const Tracking = () => (
       <Accordion>
         <Tracked name={item} />
         <input type="text" name="" id="" placeholder="Metric" />
+        <button>Add Metric</button>
       </Accordion>
     ))}
   </div>
