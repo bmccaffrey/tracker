@@ -3,10 +3,6 @@ import React, { Component } from 'react';
 import styled from 'styled-components';
 import Accordion from './Accordion';
 
-for (let i = 0; i < localStorage.length; i++) {
-  this.state.items.push(localStorage[`key${i}`]);
-}
-
 export default class Tracking extends Component {
   constructor(props) {
     super(props);
@@ -19,6 +15,12 @@ export default class Tracking extends Component {
 
   handleInput(e) {
     this.setState({ value: e.target.value });
+  }
+
+  iterate() {
+    for (let i = 0; i < localStorage.length; i++) {
+      this.state.items.push(localStorage[`key${i}`]);
+    }
   }
 
   render() {
