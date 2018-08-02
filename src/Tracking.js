@@ -15,7 +15,7 @@ Returning a styled div for each object
 */
 const Tracked = props => <Container>{props.name}</Container>;
 
-class Tracking extends Component {
+export default class Tracking extends Component {
   render() {
     return (
     <div>
@@ -51,7 +51,6 @@ const Container = styled.div`
   vertical-align: middle;
 `;
 
-export default Tracking;
 export { Container };
 export { Items };
 // Items & Container are exported to Analytics.js
