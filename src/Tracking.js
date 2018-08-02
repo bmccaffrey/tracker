@@ -18,7 +18,9 @@ const Tracked = props => <Container>{props.name}</Container>;
 export default class Tracking extends Component {
   constructor(props) {
     super(props);
-    this.state = {};
+    this.state = {
+      value: '',
+    };
   }
 
   render() {
