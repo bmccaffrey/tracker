@@ -23,6 +23,10 @@ export default class Tracking extends Component {
     };
   }
 
+  handleInput(e) {
+    this.setState({ value: e.target.value });
+  }
+
   render() {
     const { value } = this.state;
     return (
