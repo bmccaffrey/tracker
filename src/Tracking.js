@@ -21,6 +21,7 @@ export default class Tracking extends Component {
     this.state = {
       value: '',
     };
+    this.handleInput = this.handleInput.bind(this);
   }
 
   handleInput(e) {
