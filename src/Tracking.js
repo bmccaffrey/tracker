@@ -24,6 +24,7 @@ export default class Tracking extends Component {
   }
 
   render() {
+    const { value } = this.state;
     return (
       <div>
         <h1>Alright!</h1>
@@ -32,7 +33,7 @@ export default class Tracking extends Component {
           <Accordion>
             <Tracked name={item} />
             <input
-              value={this.state.value}
+              value={value}
               style={{ border: '1px solid black' }}
               type="text"
               name=""
