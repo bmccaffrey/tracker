@@ -1,7 +1,6 @@
 /* eslint react/jsx-one-expression-per-line: 0 */
 import React from 'react';
 import styled from 'styled-components';
-import { Items } from './Tracking';
 import { Container } from './Tracking';
 
 // FIXME: -- allow user to select which ones to compare
@@ -10,6 +9,11 @@ import { Container } from './Tracking';
 // TODO: -- create a <select> dropdown allow user to specify time range
 // FIXME: -- need a way to chart data
 // TODO: -- Chart.js ??
+const Items = [];
+for (let i = 0; i < localStorage.length; i++) {
+  Items.push(localStorage[`key${i}`]);
+}
+
 const Analytics = () => (
   <MarginContainer>
     <h1 style={{ marginBottom: '0px' }}>Let&apos;s analyze</h1>
