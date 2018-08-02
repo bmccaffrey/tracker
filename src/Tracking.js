@@ -32,6 +32,7 @@ export default class Tracking extends Component {
           <Accordion>
             <Tracked name={item} />
             <input
+              value={this.state.value}
               style={{ border: '1px solid black' }}
               type="text"
               name=""
