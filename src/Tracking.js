@@ -14,6 +14,10 @@ export default class Tracking extends Component {
     this.iterate = this.iterate.bind(this);
   }
 
+  componentWillMount() {
+    this.iterate();
+  }
+
   handleInput(e) {
     this.setState({ value: e.target.value });
   }
