@@ -11,6 +11,7 @@ export default class Tracking extends Component {
       items: [],
     };
     this.handleInput = this.handleInput.bind(this);
+    this.iterate = this.iterate.bind(this);
   }
 
   handleInput(e) {
