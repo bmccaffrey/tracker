@@ -16,27 +16,33 @@ Returning a styled div for each object
 const Tracked = props => <Container>{props.name}</Container>;
 
 export default class Tracking extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {};
+  }
+
   render() {
     return (
-    <div>
-      <h1>Alright!</h1>
-      <h2>We're currently tracking your:</h2>
-      {Items.map(item => (
-        <Accordion>
-          <Tracked name={item} />
-          <input
-            style={{ border: '1px solid black' }}
-            type="text"
-            name=""
-            id=""
-            placeholder="Metric"
-          />
-          <button style={{ border: '1px solid black' }}>Add Metric</button>
-        </Accordion>
-      ))}
-    </div>
-  );
+      <div>
+        <h1>Alright!</h1>
+        <h2>We're currently tracking your:</h2>
+        {Items.map(item => (
+          <Accordion>
+            <Tracked name={item} />
+            <input
+              style={{ border: '1px solid black' }}
+              type="text"
+              name=""
+              id=""
+              placeholder="Metric"
+            />
+            <button style={{ border: '1px solid black' }}>Add Metric</button>
+          </Accordion>
+        ))}
+      </div>
+    );
   }
+}
 
 const Container = styled.div`
   background: #eee;
