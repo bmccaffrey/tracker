@@ -1,5 +1,5 @@
 /* eslint react/jsx-one-expression-per-line: 0 */
-import React from 'react';
+import React, { Component } from 'react';
 import styled from 'styled-components';
 import Accordion from './Accordion';
 
@@ -15,25 +15,28 @@ Returning a styled div for each object
 */
 const Tracked = props => <Container>{props.name}</Container>;
 
-const Tracking = () => (
-  <div>
-    <h1>Alright!</h1>
-    <h2>We're currently tracking your:</h2>
-    {Items.map(item => (
-      <Accordion>
-        <Tracked name={item} />
-        <input
-          style={{ border: '1px solid black' }}
-          type="text"
-          name=""
-          id=""
-          placeholder="Metric"
-        />
-        <button style={{ border: '1px solid black' }}>Add Metric</button>
-      </Accordion>
-    ))}
-  </div>
-);
+class Tracking extends Component {
+  render() {
+    return (
+    <div>
+      <h1>Alright!</h1>
+      <h2>We're currently tracking your:</h2>
+      {Items.map(item => (
+        <Accordion>
+          <Tracked name={item} />
+          <input
+            style={{ border: '1px solid black' }}
+            type="text"
+            name=""
+            id=""
+            placeholder="Metric"
+          />
+          <button style={{ border: '1px solid black' }}>Add Metric</button>
+        </Accordion>
+      ))}
+    </div>
+  );
+  }
 
 const Container = styled.div`
   background: #eee;
