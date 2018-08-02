@@ -25,7 +25,7 @@ export default class Tracking extends Component {
     return (
       <div>
         <h1>Alright!</h1>
-        <h2>We're currently tracking your:</h2>
+        <h2>We&apos;re currently tracking your:</h2>
         {Items.map(item => (
           <Accordion>
             <Tracked name={item} />
