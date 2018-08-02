@@ -3,22 +3,16 @@ import React, { Component } from 'react';
 import styled from 'styled-components';
 import Accordion from './Accordion';
 
-// iterate over localStorage and push objects to items array
-const Items = [];
 for (let i = 0; i < localStorage.length; i++) {
-  Items.push(localStorage[`key${i}`]);
+  this.state.items.push(localStorage[`key${i}`]);
 }
-
-/*
-Pass each storage object to Tracked's props.name
-Returning a styled div for each object
-*/
 
 export default class Tracking extends Component {
   constructor(props) {
     super(props);
     this.state = {
       value: '',
+      items: [],
     };
     this.handleInput = this.handleInput.bind(this);
   }
@@ -33,7 +27,7 @@ export default class Tracking extends Component {
       <div>
         <h1>Alright!</h1>
         <h2>We&apos;re currently tracking your:</h2>
-        {Items.map(item => (
+        {this.state.items.map(item => (
           <Accordion>
             <Container>{item}</Container>
             <input
@@ -65,5 +59,4 @@ const Container = styled.div`
 `;
 
 export { Container };
-export { Items };
 // Items & Container are exported to Analytics.js
