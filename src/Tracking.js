@@ -13,7 +13,6 @@ for (let i = 0; i < localStorage.length; i++) {
 Pass each storage object to Tracked's props.name
 Returning a styled div for each object
 */
-const Tracked = props => <Container>{props.name}</Container>;
 
 export default class Tracking extends Component {
   constructor(props) {
@@ -36,14 +35,12 @@ export default class Tracking extends Component {
         <h2>We&apos;re currently tracking your:</h2>
         {Items.map(item => (
           <Accordion>
-            <Tracked name={item} />
+            <Container>{item}</Container>
             <input
               value={value}
               onInput={this.handleInput}
               style={{ border: '1px solid black' }}
               type="text"
-              name=""
-              id=""
               placeholder="Metric"
             />
             <button style={{ border: '1px solid black' }}>Add Metric</button>
