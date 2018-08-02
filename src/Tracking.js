@@ -39,6 +39,7 @@ export default class Tracking extends Component {
             <Tracked name={item} />
             <input
               value={value}
+              onInput={this.handleInput}
               style={{ border: '1px solid black' }}
               type="text"
               name=""
