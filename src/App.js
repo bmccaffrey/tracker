@@ -7,6 +7,7 @@ import Header from './Header';
 import Dashboard from './Dashboard';
 import Tracking from './Tracking';
 import Analytics from './Analytics';
+import Simplified from './Simplified';
 
 // TODO: -- import routes & components from Dashboard.js
 // FIXME: -- can't access certains routes w/o being logged in
@@ -20,6 +21,7 @@ const App = () => (
         <Route path="/dashboard" component={Dashboard} />
         <Route path="/tracking" component={Tracking} />
         <Route path="/analytics" component={Analytics} />
+        <Route path="/simplified" component={Simplified} />
         {/* <Route path="/" component={} /> */}
       </Switch>
     </div>
