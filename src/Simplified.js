@@ -3,19 +3,19 @@ import React from 'react';
 const Simplified = () => (
   <div>
     <h1>
-Placeholder Text
+What would you like to track?
     </h1>
     <input type="text" />
     <h1>
-Placeholder Text
+How would you like to track it?
     </h1>
     <input type="text" />
     <h1>
-Placeholder Text
+When's good for you?
     </h1>
     <input type="text" />
     <h1>
-Placeholder Text
+Why do you want to track it?
     </h1>
     <input type="text" />
   </div>
