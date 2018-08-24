@@ -1,3 +1,4 @@
 import Toggle from './Toggle';
+import Accordion from './Accordion';
 
-export { Toggle };
+export { Toggle, Accordion };
