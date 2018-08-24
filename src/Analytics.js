@@ -1,7 +1,7 @@
 /* eslint react/jsx-one-expression-per-line: 0 */
 import React from 'react';
 import styled from 'styled-components';
-import { Container } from './Tracking';
+import { Container } from './Elements';
 
 // FIXME: -- allow user to select which ones to compare
 // TODO: -- write a compare function

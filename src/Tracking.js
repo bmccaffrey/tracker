@@ -65,5 +65,4 @@ const Container = styled.div`
   vertical-align: middle;
 `;
 
-export { Container };
-// Items & Container are exported to Analytics.js
+// Items is exported to Analytics.js
