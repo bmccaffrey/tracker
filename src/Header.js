@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
-import StyledLink from './StyledLink';
+import { StyledLink } from './Elements';
 import logo from './logo.svg';
 import Hamburger from './Hamburger';
 

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
-import StyledLink from './StyledLink';
+import { StyledLink } from './Elements';
 
 // TODO: -- store username in localStorage
 // TODO: -- store password in localStorage

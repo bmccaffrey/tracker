@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import StyledLink from './StyledLink';
+import { StyledLink } from './Elements';
 import styled from 'styled-components';
 import './Hamburger.css';
 import logout from './logout.svg';
@@ -58,7 +58,7 @@ export default class Hamburger extends Component {
               <StyledLink style={{ color: 'white' }} to="/dashboard">
                 <h1>Settings</h1>
               </StyledLink>
-              
+
               <StyledLink style={{ color: 'white' }} to="/dashboard">
                 <div>
                   <Logout src={logout} alt="" />
