@@ -1,6 +1,5 @@
 /* eslint react/jsx-one-expression-per-line: 0 */
 import React, { Component } from 'react';
-import styled from 'styled-components';
 import Accordion from './Accordion';
 import { Container } from './Elements';
 
