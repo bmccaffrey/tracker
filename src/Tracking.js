@@ -2,6 +2,7 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
 import Accordion from './Accordion';
+import { Container } from './Elements';
 
 export default class Tracking extends Component {
   constructor(props) {
@@ -51,18 +52,5 @@ export default class Tracking extends Component {
     );
   }
 }
-
-const Container = styled.div`
-  background: #eee;
-  border: 0;
-  border-radius: 10px;
-  color: #444;
-  height: 30px;
-  line-height: 30px;
-  margin-top: 25px;
-  padding: 0;
-  text-indent: 10%;
-  vertical-align: middle;
-`;
 
 // Items is exported to Analytics.js
