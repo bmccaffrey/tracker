@@ -1,6 +1,6 @@
 /* eslint react/jsx-one-expression-per-line: 0 */
 import React, { Component } from 'react';
-import Accordion from './Accordion';
+import { Accordion } from './Utilities';
 import { Container } from './Elements';
 
 export default class Tracking extends Component {

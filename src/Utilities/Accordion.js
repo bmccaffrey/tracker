@@ -2,7 +2,7 @@
 /* eslint react/button-has-type: 0 */
 /* eslint no-unused-expressions: 0 */
 import React from 'react';
-import { Toggle } from './Utilities';
+import Toggle from './Toggle';
 
 const Accordion = (props) => {
   const { children } = props;
