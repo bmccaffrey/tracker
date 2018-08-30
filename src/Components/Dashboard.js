@@ -4,7 +4,7 @@ import React from 'react';
 import styled from 'styled-components';
 import { Accordion } from 'Utilities';
 import { avatar, edit } from 'Icons';
-import StyledLink from './StyledLink';
+import { StyledLink } from 'Elements';
 
 // TODO: -- pull name from localStorage & insert into ProfileName
 // TODO: -- create 7 Day Forecast

@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
-import StyledLink from './StyledLink';
-import Theme from './Theme';
+import { StyledLink, Theme } from 'Elements';
 
 // const Placeholder = Theme.extend`
 //   width: 100%;

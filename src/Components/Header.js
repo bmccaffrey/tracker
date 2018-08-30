@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
 import { logo } from 'Icons';
-import StyledLink from './StyledLink';
+import { StyledLink } from 'Elements';
 import Hamburger from './Hamburger';
 
 const Banner = styled.header`

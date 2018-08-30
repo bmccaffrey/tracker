@@ -2,7 +2,7 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
 import { Accordion } from 'Utilities';
-import Theme from './Theme';
+import { Theme } from 'Elements';
 
 const StyledRow = styled.div`
   ${Theme()};
