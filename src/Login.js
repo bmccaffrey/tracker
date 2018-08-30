@@ -8,14 +8,8 @@ import { StyledLink, Theme } from './Elements';
 // TODO: -- create a PasswordReset Component
 const Login = () => (
   <Fields>
-    <input
-      type="email"
-      name=""
-      id=""
-      placeholder="Phone number, username, or e-mail"
-      className="User"
-    />
-    <input type="password" name="" id="" placeholder="Password" className="User" />
+    <Input type="email" name="" id="" placeholder="Phone number, username, or e-mail" />
+    <Input type="password" name="" id="" placeholder="Password" />
     <Forget>
 Forgot password?
     </Forget>
