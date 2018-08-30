@@ -1,26 +1,13 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
-import { StyledLink } from 'Elements';
+import { StyledLink, Input } from 'Elements';
 
 const Arrow = styled.p`
   font-size: 2em;
   margin: 0;
 `;
 const Container = styled.div`
-margin: 5%;
-.track {
-  background: #eee;
-  border: 0;
-  border-radius: 10px;
-  color: #444;
-  height: 30px;
-  margin-top: 25px;
-  padding: 0;
-  text-align: center;
-  width: 100%;
-  ::-webkit-input-placeholder {
-    color: #444;
-  }
+  margin: 5%;
 `;
 const StyledH2 = styled.h2`
   text-indent: 10%;
@@ -86,7 +73,7 @@ export default class Greeting extends Component {
     return (
       <Container>
         {this.state.message}
-        <input type="text" value={this.state.value} onInput={this.handleInput} className="track" />
+        <Input type="text" value={this.state.value} onInput={this.handleInput} />
         <FlexContainer>
           <StyledButton type="submit" onClick={this.submit}>
             Track
