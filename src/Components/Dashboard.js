@@ -15,38 +15,38 @@ import { StyledLink } from 'Elements';
 // TODO: -- update App.js w/ new routes
 // TODO: -- create editPicture function
 const ProfilePicture = styled.img`
-  float: left;
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
   background-color: #56d5fa;
+  border-radius: 50%;
+  float: left;
+  height: 50px;
   margin-top: 5px;
+  width: 50px;
 `;
 const ProfileName = styled.h1`
-  text-align: center;
   margin-bottom: 0px;
+  text-align: center;
 `;
 const Container = styled.div`
   display: grid;
   grid-template-rows: 55px 1fr;
-  row-gap: 100px;
   margin: 5%;
+  row-gap: 100px;
 `;
 const Edit = styled.img`
   height: 15px;
-  width: 15px;
-  margin-right: 5px;
   float: left;
+  margin-right: 5px;
+  width: 15px;
 `;
 const StyledButton = styled.button`
   background: #eee;
-  color: #444;
-  padding: 5px;
-  text-align: center;
   border: 0;
-  position: relative;
+  color: #444;
   left: 10px;
   margin-top: 5px;
+  padding: 5px;
+  position: relative;
+  text-align: center;
 `;
 
 const Dashboard = () => (
