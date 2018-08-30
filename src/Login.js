@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
-import { StyledLink } from './Elements';
+import { StyledLink, Theme } from './Elements';
 
 // TODO: -- store username in localStorage
 // TODO: -- store password in localStorage
@@ -28,6 +28,14 @@ Forgot password?
 );
 
 export default Login;
+
+const Placeholder = Theme.extend`
+  width: 100%;
+  text-align: center;
+  ::-webkit-input-placeholder {
+    color: #444;
+  }
+`;
 
 const Fields = styled.div`
   background: white;
