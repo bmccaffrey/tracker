@@ -2,6 +2,43 @@ import React, { Component } from 'react';
 import styled from 'styled-components';
 import { StyledLink } from './Elements';
 
+const Arrow = styled.p`
+  font-size: 2em;
+  margin: 0;
+`;
+const Container = styled.div`
+margin: 5%;
+.track {
+  background: #eee;
+  border: 0;
+  border-radius: 10px;
+  color: #444;
+  height: 30px;
+  margin-top: 25px;
+  padding: 0;
+  text-align: center;
+  width: 100%;
+  ::-webkit-input-placeholder {
+    color: #444;
+  }
+`;
+const StyledH2 = styled.h2`
+  text-indent: 10%;
+`;
+const StyledButton = styled.button`
+  background-color: grey;
+  color: white;
+  margin-top: 15px;
+  margin-right: 5px;
+  height: 30px;
+  width: 75px;
+  border-radius: 10px;
+`;
+const FlexContainer = styled.div`
+  display: flex;
+  justify-content: flex-end;
+`;
+
 // TODO: -- "track" button darkens on text input
 // TODO: -- add box-shadow to buttons
 // FIXME -- "Finished?" & Arrow need additional styling
@@ -64,44 +101,3 @@ export default class Greeting extends Component {
     );
   }
 }
-
-const Arrow = styled.p`
-  font-size: 2em;
-  margin: 0;
-`;
-
-const Container = styled.div`
-margin: 5%;
-.track {
-  background: #eee;
-  border: 0;
-  border-radius: 10px;
-  color: #444;
-  height: 30px;
-  margin-top: 25px;
-  padding: 0;
-  text-align: center;
-  width: 100%;
-  ::-webkit-input-placeholder {
-    color: #444;
-  }
-`;
-
-const StyledH2 = styled.h2`
-  text-indent: 10%;
-`;
-
-const StyledButton = styled.button`
-  background-color: grey;
-  color: white;
-  margin-top: 15px;
-  margin-right: 5px;
-  height: 30px;
-  width: 75px;
-  border-radius: 10px;
-`;
-
-const FlexContainer = styled.div`
-  display: flex;
-  justify-content: flex-end;
-`;

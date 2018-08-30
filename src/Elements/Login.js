@@ -3,6 +3,26 @@ import styled from 'styled-components';
 import StyledLink from './StyledLink';
 import Theme from './Theme';
 
+const Placeholder = Theme.extend`
+  width: 100%;
+  text-align: center;
+  ::-webkit-input-placeholder {
+    color: #444;
+  }
+`;
+const Input = Placeholder.withComponent('input');
+const Button = Placeholder.withComponent('button');
+const Forget = styled.div`
+  font-size: 0.75rem;
+  text-align: right;
+  margin-top: 10px;
+`;
+const AppGrid = styled.div`
+  display: grid;
+  grid-template-rows: repeat(2, 25%);
+  height: 100vh;
+`;
+
 // TODO: -- store username in localStorage
 // TODO: -- store password in localStorage
 // TODO: -- set prop for LoggedIn
@@ -26,25 +46,3 @@ Login / Creat Account
 );
 
 export default Login;
-
-const Placeholder = Theme.extend`
-  width: 100%;
-  text-align: center;
-  ::-webkit-input-placeholder {
-    color: #444;
-  }
-`;
-const Input = Placeholder.withComponent('input');
-const Button = Placeholder.withComponent('button');
-
-const Forget = styled.div`
-  font-size: 0.75rem;
-  text-align: right;
-  margin-top: 10px;
-`;
-
-const AppGrid = styled.div`
-  display: grid;
-  grid-template-rows: repeat(2, 25%);
-  height: 100vh;
-`;

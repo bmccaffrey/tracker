@@ -15,6 +15,40 @@ import edit from './edit.svg';
 // TODO: -- wrap categories in Links
 // TODO: -- update App.js w/ new routes
 // TODO: -- create editPicture function
+const ProfilePicture = styled.img`
+  float: left;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #56d5fa;
+  margin-top: 5px;
+`;
+const ProfileName = styled.h1`
+  text-align: center;
+  margin-bottom: 0px;
+`;
+const Container = styled.div`
+  display: grid;
+  grid-template-rows: 55px 1fr;
+  row-gap: 100px;
+  margin: 5%;
+`;
+const Edit = styled.img`
+  height: 15px;
+  width: 15px;
+  margin-right: 5px;
+  float: left;
+`;
+const StyledButton = styled.button`
+  background: #eee;
+  color: #444;
+  padding: 5px;
+  text-align: center;
+  border: 0;
+  position: relative;
+  left: 10px;
+  margin-top: 5px;
+`;
 
 const Dashboard = () => (
   <Container>
@@ -60,38 +94,3 @@ const Dashboard = () => (
 );
 
 export default Dashboard;
-
-const ProfilePicture = styled.img`
-  float: left;
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  background-color: #56d5fa;
-  margin-top: 5px;
-`;
-const ProfileName = styled.h1`
-  text-align: center;
-  margin-bottom: 0px;
-`;
-const Container = styled.div`
-  display: grid;
-  grid-template-rows: 55px 1fr;
-  row-gap: 100px;
-  margin: 5%;
-`;
-const Edit = styled.img`
-  height: 15px;
-  width: 15px;
-  margin-right: 5px;
-  float: left;
-`;
-const StyledButton = styled.button`
-  background: #eee;
-  color: #444;
-  padding: 5px;
-  text-align: center;
-  border: 0;
-  position: relative;
-  left: 10px;
-  margin-top: 5px;
-`;

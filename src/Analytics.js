@@ -3,6 +3,27 @@ import React from 'react';
 import styled from 'styled-components';
 import { Theme } from './Elements';
 
+const StyledRow = Theme.extend`
+  text-indent: 10%;
+`;
+const StyledH1 = styled.h1`
+  text-indent: 10%;
+  margin-top: 0px;
+`;
+const MarginContainer = styled.div`
+  margin: 5%;
+`;
+const Checkbox = styled.input.attrs({
+  type: 'checkbox',
+})`
+  height: 20px;
+  width: 20px;
+  float: left;
+  position: relative;
+  left: 25px;
+  top: 2px;
+`;
+
 // FIXME: -- allow user to select which ones to compare
 // TODO: -- write a compare function
 // FIXME: -- allow user to specify time range
@@ -29,25 +50,3 @@ const Analytics = () => (
 );
 
 export default Analytics;
-
-const StyledRow = Theme.extend`
-  text-indent: 10%;
-`;
-
-const StyledH1 = styled.h1`
-  text-indent: 10%;
-  margin-top: 0px;
-`;
-const MarginContainer = styled.div`
-  margin: 5%;
-`;
-const Checkbox = styled.input.attrs({
-  type: 'checkbox',
-})`
-  height: 20px;
-  width: 20px;
-  float: left;
-  position: relative;
-  left: 25px;
-  top: 2px;
-`;

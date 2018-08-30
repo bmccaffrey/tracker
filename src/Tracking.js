@@ -3,6 +3,10 @@ import React, { Component } from 'react';
 import { Accordion } from './Utilities';
 import { Theme } from './Elements';
 
+const StyledRow = Theme.extend`
+  text-indent: 10%;
+`;
+
 export default class Tracking extends Component {
   constructor(props) {
     super(props);
@@ -51,9 +55,5 @@ export default class Tracking extends Component {
     );
   }
 }
-
-const StyledRow = Theme.extend`
-  text-indent: 10%;
-`;
 
 // Items is exported to Analytics.js

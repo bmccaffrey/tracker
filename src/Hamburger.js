@@ -4,6 +4,25 @@ import styled from 'styled-components';
 import './Hamburger.css';
 import logout from './logout.svg';
 
+const SideNav = styled.div`
+  height: 100%;
+  width: 250px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  right: 0;
+  background: black;
+  opacity: 0.9;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+`;
+const Logout = styled.img`
+  float: left;
+  height: 35px;
+  margin-right: 15px;
+`;
+
 // TODO: -- create Profile icon
 // TODO: -- create Dashboard icon
 // TODO: -- create Tracking icon
@@ -72,22 +91,3 @@ export default class Hamburger extends Component {
     );
   }
 }
-
-const SideNav = styled.div`
-  height: 100%;
-  width: 250px;
-  position: fixed;
-  z-index: 1;
-  top: 0;
-  right: 0;
-  background: black;
-  opacity: 0.9;
-  overflow-x: hidden;
-  transition: 0.5s;
-  padding-top: 60px;
-`;
-const Logout = styled.img`
-  float: left;
-  height: 35px;
-  margin-right: 15px;
-`;

@@ -4,23 +4,6 @@ import { StyledLink } from './Elements';
 import logo from './logo.svg';
 import Hamburger from './Hamburger';
 
-// TODO: -- create icon
-// TODO: -- insert icon
-
-const Header = () => (
-  <StyledLink to="/">
-    <Banner className="App-header">
-      <Logo src={logo} className="App-logo" alt="logo" />
-      <Title className="App-title">
-Tracker
-      </Title>
-      <Hamburger />
-    </Banner>
-  </StyledLink>
-);
-
-export default Header;
-
 const Banner = styled.header`
   background: black;
   display: flex;
@@ -37,3 +20,19 @@ const Title = styled.h1`
   font-size: 1rem;
   text-align: center;
 `;
+
+// TODO: -- create icon
+// TODO: -- insert icon
+const Header = () => (
+  <StyledLink to="/">
+    <Banner className="App-header">
+      <Logo src={logo} className="App-logo" alt="logo" />
+      <Title className="App-title">
+Tracker
+      </Title>
+      <Hamburger />
+    </Banner>
+  </StyledLink>
+);
+
+export default Header;
