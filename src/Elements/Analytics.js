@@ -1,7 +1,7 @@
 /* eslint react/jsx-one-expression-per-line: 0 */
 import React from 'react';
 import styled from 'styled-components';
-import { Theme } from './Elements';
+import Theme from './Theme';
 
 const StyledRow = styled.div`
   ${Theme()};
