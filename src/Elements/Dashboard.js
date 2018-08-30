@@ -2,7 +2,7 @@
 /* eslint react/button-has-type: 0 */
 import React from 'react';
 import styled from 'styled-components';
-import { StyledLink } from './Elements';
+import StyledLink from './StyledLink';
 import avatar from './avatar.svg';
 import { Accordion } from './Utilities';
 import edit from './edit.svg';
