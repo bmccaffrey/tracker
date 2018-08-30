@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import StyledLink from './StyledLink';
 import styled from 'styled-components';
 import 'Hamburger.css';
-import logout from 'logout.svg';
+import { logout } from 'Icons';
 
 const SideNav = styled.div`
   height: 100%;

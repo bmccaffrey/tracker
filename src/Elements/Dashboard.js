@@ -3,8 +3,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { Accordion } from 'Utilities';
-import edit from 'edit.svg';
-import avatar from 'avatar.svg';
+import { avatar, edit } from 'Icons';
 import StyledLink from './StyledLink';
 
 // TODO: -- pull name from localStorage & insert into ProfileName
