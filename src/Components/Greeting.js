@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
-import { StyledLink, Input } from 'Elements';
+import { StyledLink, Input, StyledButton } from 'Elements';
 
 const Arrow = styled.p`
   font-size: 2em;
@@ -11,15 +11,6 @@ const Container = styled.div`
 `;
 const StyledH2 = styled.h2`
   text-indent: 10%;
-`;
-const StyledButton = styled.button`
-  background-color: grey;
-  color: white;
-  margin-top: 15px;
-  margin-right: 5px;
-  height: 30px;
-  width: 75px;
-  border-radius: 10px;
 `;
 const FlexContainer = styled.div`
   display: flex;
