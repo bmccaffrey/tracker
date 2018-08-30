@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
 import './App.css';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import { Login, Greeting, Analytics } from './Elements';
+import {
+  Login, Greeting, Dashboard, Analytics,
+} from './Elements';
 import Header from './Header';
-import Dashboard from './Dashboard';
 import Tracking from './Tracking';
 
 // TODO: -- import routes & components from Dashboard.js
