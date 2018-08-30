@@ -2,10 +2,9 @@ import React, { Component } from 'react';
 import './App.css';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import {
-  Login, Greeting, Dashboard, Analytics,
+  Login, Greeting, Dashboard, Tracking, Analytics,
 } from 'Elements';
 import Header from './Header';
-import Tracking from './Tracking';
 
 // TODO: -- import routes & components from Dashboard.js
 // FIXME: -- can't access certains routes w/o being logged in
