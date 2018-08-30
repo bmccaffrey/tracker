@@ -1,6 +1,4 @@
-import styled from 'styled-components';
-
-const Theme = styled.div`
+export default () => `
   background: #eee;
   border: 0;
   border-radius: 10px;
@@ -11,5 +9,3 @@ const Theme = styled.div`
   padding: 0;
   vertical-align: middle;
 `;
-
-export default Theme;
