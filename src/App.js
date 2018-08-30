@@ -3,7 +3,7 @@ import './App.css';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import {
   Login, Greeting, Dashboard, Analytics,
-} from './Elements';
+} from 'Elements';
 import Header from './Header';
 import Tracking from './Tracking';
 
