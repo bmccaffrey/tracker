@@ -1,0 +1,25 @@
+.container {
+  height: 24px;
+  position: relative;
+  bottom: 5px;
+  right: 10px;
+}
+
+.line1,
+.line2,
+.line3 {
+  border: 1px solid #fff;
+  width: 18px;
+  margin: 6px 0;
+  transition: 0.4s;
+}
+
+.change .line1 {
+  transform: rotate(-45deg) translate(-9px, 6px);
+}
+.change .line2 {
+  opacity: 0;
+}
+.change .line3 {
+  transform: rotate(45deg) translate(-5px, -3px);
+}
