@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
-import { StyledLink } from './Elements';
+import { StyledLink, Hamburger } from './Elements';
 import logo from './logo.svg';
-import Hamburger from './Hamburger';
 
 const Banner = styled.header`
   background: black;
