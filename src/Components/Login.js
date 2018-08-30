@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
-import { StyledLink, Theme } from 'Elements';
+import { StyledLink, Theme, Input } from 'Elements';
 
 // const Placeholder = Theme.extend`
 //   width: 100%;
@@ -9,14 +9,6 @@ import { StyledLink, Theme } from 'Elements';
 //     color: #444;
 //   }
 // `;
-const Input = styled.input`
-  ${Theme()};
-  width: 100%;
-  text-align: center;
-  ::-webkit-input-placeholder {
-    color: #444;
-  }
-`;
 const Button = styled.button`
   ${Theme()};
 `;
