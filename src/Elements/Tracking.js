@@ -1,8 +1,8 @@
 /* eslint react/jsx-one-expression-per-line: 0 */
 import React, { Component } from 'react';
 import styled from 'styled-components';
-import { Accordion } from './Utilities';
-import { Theme } from './Elements';
+import { Accordion } from 'Utilities';
+import Theme from './Theme';
 
 const StyledRow = styled.div`
   ${Theme()};
