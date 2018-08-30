@@ -3,7 +3,7 @@ import './App.css';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import {
   Login, Greeting, Dashboard, Tracking, Analytics, Header,
-} from 'Elements';
+} from 'Components';
 
 // TODO: -- import routes & components from Dashboard.js
 // FIXME: -- can't access certains routes w/o being logged in
