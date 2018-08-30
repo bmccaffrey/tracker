@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import 'css/App.css';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import {
-  Login, Greeting, Dashboard, Tracking, Analytics, Header,
+  Login, Greeting, Dashboard, Tracking, Analytics, Header, Simplified,
 } from 'Components';
 
 // TODO: -- import routes & components from Dashboard.js
