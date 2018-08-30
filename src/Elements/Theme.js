@@ -9,7 +9,6 @@ const Theme = styled.div`
   line-height: 30px;
   margin-top: 25px;
   padding: 0;
-  text-indent: 10%;
   vertical-align: middle;
 `;
 
