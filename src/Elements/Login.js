@@ -3,15 +3,26 @@ import styled from 'styled-components';
 import StyledLink from './StyledLink';
 import Theme from './Theme';
 
-const Placeholder = Theme.extend`
+// const Placeholder = Theme.extend`
+//   width: 100%;
+//   text-align: center;
+//   ::-webkit-input-placeholder {
+//     color: #444;
+//   }
+// `;
+const Input = styled.input`
+  ${Theme()};
   width: 100%;
   text-align: center;
   ::-webkit-input-placeholder {
     color: #444;
   }
 `;
-const Input = Placeholder.withComponent('input');
-const Button = Placeholder.withComponent('button');
+const Button = styled.button`
+  ${Theme()};
+`;
+// const Input = Placeholder.withComponent('input');
+// const Button = Placeholder.withComponent('button');
 const Forget = styled.div`
   font-size: 0.75rem;
   text-align: right;

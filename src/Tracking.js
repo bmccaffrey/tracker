@@ -1,9 +1,11 @@
 /* eslint react/jsx-one-expression-per-line: 0 */
 import React, { Component } from 'react';
+import styled from 'styled-components';
 import { Accordion } from './Utilities';
 import { Theme } from './Elements';
 
-const StyledRow = Theme.extend`
+const StyledRow = styled.div`
+  ${Theme()};
   text-indent: 10%;
 `;
 

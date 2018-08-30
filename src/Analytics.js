@@ -3,7 +3,8 @@ import React from 'react';
 import styled from 'styled-components';
 import { Theme } from './Elements';
 
-const StyledRow = Theme.extend`
+const StyledRow = styled.div`
+  ${Theme()};
   text-indent: 10%;
 `;
 const StyledH1 = styled.h1`
