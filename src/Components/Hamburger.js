@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { StyledLink } from 'Elements';
 import styled from 'styled-components';
-import 'Hamburger.css';
+import 'css/Hamburger.css';
 import { logout } from 'Icons';
 
 const SideNav = styled.div`
