@@ -17,6 +17,7 @@ const App = () => (
         <Route path="/dashboard" component={Dashboard} />
         <Route path="/tracking" component={Tracking} />
         <Route path="/analytics" component={Analytics} />
+        <Route path="/simplified" component={Simplified} />
         {/* <Route path="/" component={} /> */}
       </Switch>
     </div>
