@@ -37,6 +37,8 @@ const Placeholder = Theme.extend`
   }
 `;
 
+const Input = Placeholder.withComponent('input');
+
 const Fields = styled.div`
   background: white;
   .User {
