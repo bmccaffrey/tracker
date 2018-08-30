@@ -14,9 +14,9 @@ const Login = () => (
 Forgot password?
     </Forget>
     <StyledLink to="/greeting">
-      <button type="submit" className="User">
-        Login / Creat Account
-      </button>
+      <Button type="submit">
+Login / Creat Account
+      </Button>
     </StyledLink>
   </Fields>
 );
