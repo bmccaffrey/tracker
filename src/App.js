@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import { Login, Analytics } from './Elements';
-import Greeting from './Greeting';
+import { Login, Greeting, Analytics } from './Elements';
 import Header from './Header';
 import Dashboard from './Dashboard';
 import Tracking from './Tracking';
