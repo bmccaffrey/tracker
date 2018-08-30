@@ -7,7 +7,7 @@ import { StyledLink, Theme } from './Elements';
 // TODO: -- set prop for LoggedIn
 // TODO: -- create a PasswordReset Component
 const Login = () => (
-  <Fields>
+  <div>
     <Input type="email" name="" id="" placeholder="Phone number, username, or e-mail" />
     <Input type="password" name="" id="" placeholder="Password" />
     <Forget>
@@ -18,7 +18,7 @@ Forgot password?
 Login / Creat Account
       </Button>
     </StyledLink>
-  </Fields>
+  </div>
 );
 
 export default Login;
@@ -33,24 +33,6 @@ const Placeholder = Theme.extend`
 
 const Input = Placeholder.withComponent('input');
 const Button = Placeholder.withComponent('button');
-
-const Fields = styled.div`
-  background: white;
-  .User {
-    background: #eee;
-    border: 0;
-    border-radius: 10px;
-    color: #444;
-    height: 30px;
-    margin-top: 25px;
-    padding: 0;
-    text-align: center;
-    width: 100%;
-    ::-webkit-input-placeholder {
-      color: #444;
-    }
-  }
-`;
 
 const Forget = styled.div`
   font-size: 0.75rem;
