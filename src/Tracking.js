@@ -1,7 +1,7 @@
 /* eslint react/jsx-one-expression-per-line: 0 */
 import React, { Component } from 'react';
 import { Accordion } from './Utilities';
-import { Container } from './Elements';
+import { Theme } from './Elements';
 
 export default class Tracking extends Component {
   constructor(props) {
@@ -36,7 +36,7 @@ export default class Tracking extends Component {
         <h2>We&apos;re currently tracking your:</h2>
         {this.state.items.map(item => (
           <Accordion>
-            <Container>{item}</Container>
+            <StyledRow>{item}</StyledRow>
             <input
               value={value}
               onInput={this.handleInput}
@@ -51,5 +51,9 @@ export default class Tracking extends Component {
     );
   }
 }
+
+const StyledRow = Theme.extend`
+  text-indent: 10%;
+`;
 
 // Items is exported to Analytics.js
