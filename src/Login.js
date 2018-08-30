@@ -32,6 +32,7 @@ const Placeholder = Theme.extend`
 `;
 
 const Input = Placeholder.withComponent('input');
+const Button = Placeholder.withComponent('button');
 
 const Fields = styled.div`
   background: white;
