@@ -2,18 +2,9 @@ import React from 'react';
 import styled from 'styled-components';
 import { StyledLink, Theme, Input } from 'Elements';
 
-// const Placeholder = Theme.extend`
-//   width: 100%;
-//   text-align: center;
-//   ::-webkit-input-placeholder {
-//     color: #444;
-//   }
-// `;
 const Button = styled.button`
   ${Theme()};
 `;
-// const Input = Placeholder.withComponent('input');
-// const Button = Placeholder.withComponent('button');
 const Forget = styled.div`
   font-size: 0.75rem;
   text-align: right;
