@@ -30,7 +30,6 @@ const Placeholder = Theme.extend`
     color: #444;
   }
 `;
-
 const Input = Placeholder.withComponent('input');
 const Button = Placeholder.withComponent('button');
 

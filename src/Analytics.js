@@ -1,7 +1,7 @@
 /* eslint react/jsx-one-expression-per-line: 0 */
 import React from 'react';
 import styled from 'styled-components';
-import { Container } from './Elements';
+import { Theme } from './Elements';
 
 // FIXME: -- allow user to select which ones to compare
 // TODO: -- write a compare function
@@ -20,15 +20,20 @@ const Analytics = () => (
     <StyledH1>&amp; compare</StyledH1>
     <h2>and see if we can&apos;t come up with some insights...</h2>
     {Items.map(item => (
-      <Container>
+      <StyledRow>
         <Checkbox type="checkbox" name="" id="" />
         <label>{item}</label>
-      </Container>
+      </StyledRow>
     ))}
   </MarginContainer>
 );
 
 export default Analytics;
+
+const StyledRow = Theme.extend`
+  text-indent: 10%;
+`;
+
 const StyledH1 = styled.h1`
   text-indent: 10%;
   margin-top: 0px;
