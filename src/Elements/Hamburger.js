@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { StyledLink } from './Elements';
+import StyledLink from './StyledLink';
 import styled from 'styled-components';
 import './Hamburger.css';
 import logout from './logout.svg';
