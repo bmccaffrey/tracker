@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import GetExample from './GetExample';
 
 const MarginContainer = styled.div`
   margin: 5%;
@@ -18,22 +19,15 @@ const StyledInput = styled.input`
 
 const Simplified = () => (
   <MarginContainer>
-    <h1>
-What would you like to track?
-    </h1>
+    <h1>What would you like to track?</h1>
     <StyledInput type="text" />
-    <h1>
-How would you like to track it?
-    </h1>
+    <h1>How would you like to track it?</h1>
     <StyledInput type="text" />
-    <h1>
-When's good for you?
-    </h1>
+    <h1>When's good for you?</h1>
     <StyledInput type="text" />
-    <h1>
-Why do you want to track it?
-    </h1>
+    <h1>Why do you want to track it?</h1>
     <StyledInput type="text" />
+    <GetExample />
   </MarginContainer>
 );
 export default Simplified;

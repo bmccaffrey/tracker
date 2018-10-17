@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
-import { StyledLink, Input, StyledButton } from 'Elements';
+import { StyledLink, Input, StyledButton } from '../Elements';
 
 const Arrow = styled.p`
   font-size: 2em;

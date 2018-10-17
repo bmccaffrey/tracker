@@ -2,9 +2,9 @@
 /* eslint react/button-has-type: 0 */
 import React from 'react';
 import styled from 'styled-components';
-import { Accordion } from 'Utilities';
-import { avatar, edit } from 'Icons';
-import { StyledLink } from 'Elements';
+import { avatar, edit } from '../Icons';
+import { StyledLink } from '../Elements';
+import { Accordion } from '../Utilities';
 
 // TODO: -- pull name from localStorage & insert into ProfileName
 // TODO: -- create 7 Day Forecast

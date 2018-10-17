@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { StyledLink, Theme, Input } from 'Elements';
+import { StyledLink, Theme, Input } from '../Elements';
 
 const Button = styled.button`
   ${Theme()};
@@ -26,13 +26,9 @@ const Login = () => (
     <div>
       <Input type="email" name="" id="" placeholder="Phone number, username, or e-mail" />
       <Input type="password" name="" id="" placeholder="Password" />
-      <Forget>
-Forgot password?
-      </Forget>
+      <Forget>Forgot password?</Forget>
       <StyledLink to="/greeting">
-        <Button type="submit">
-Login / Creat Account
-        </Button>
+        <Button type="submit">Login / Creat Account</Button>
       </StyledLink>
     </div>
   </AppGrid>

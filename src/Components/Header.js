@@ -1,8 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
-import { logo } from 'Icons';
-import { StyledLink } from 'Elements';
 import Hamburger from './Hamburger';
+import { logo } from '../Icons';
+import { StyledLink } from '../Elements';
 
 const Banner = styled.header`
   background: black;
@@ -27,9 +27,7 @@ const Header = () => (
   <StyledLink to="/">
     <Banner className="App-header">
       <Logo src={logo} className="App-logo" alt="logo" />
-      <Title className="App-title">
-Tracker
-      </Title>
+      <Title className="App-title">Tracker</Title>
       <Hamburger />
     </Banner>
   </StyledLink>

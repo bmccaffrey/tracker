@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
-import { StyledLink } from 'Elements';
+import { StyledLink } from '../Elements';
 import styled from 'styled-components';
-import 'css/Hamburger.css';
-import { logout } from 'Icons';
+import '../css/Hamburger.css';
+import { logout } from '../Icons';
 
 const SideNav = styled.div`
   height: 100%;
