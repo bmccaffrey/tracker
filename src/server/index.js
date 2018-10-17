@@ -1,4 +1,5 @@
 // Imports
+require('dotenv').config({ path: '.env.local' });
 const express = require('express');
 
 const app = express();
@@ -7,23 +8,27 @@ const { Client } = require('pg');
 
 const PORT = process.env.PORT || 5000;
 
-app.use(express.static('public'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
-const client = new Client();
+const client = new Client({
+  user: process.env.PGUSER,
+  host: process.env.PGHOST,
+  database: process.env.PGDATABASE,
+  password: process.env.PGPASSWORD,
+  port: process.env.PGPORT,
+});
 
-const connect = async () => client.connect();
+async function connect() {
+  await client.connect();
+}
 
 connect();
 
 app.get('/recipes', async (req, res) => {
-  if (req.method == 'GET') {
-    const column = req.query.recipes;
-    const { rows } = await client.query(`SELECT ${column} FROM recipes;`);
-    console.log('Rows:', rows);
-    res.send(rows);
-  }
+  const { rows } = await client.query("SELECT * FROM recipes WHERE name = 'Cereal';");
+  const [firstRow] = rows;
+  res.send(firstRow);
 });
 
 app.post('/', async (req, res) => {
