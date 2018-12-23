@@ -25,20 +25,37 @@ async function connect() {
 
 connect();
 
-app.get('/recipes', async (req, res) => {
-  const { rows } = await client.query("SELECT * FROM recipes WHERE name = 'Cereal';");
-  const [firstRow] = rows;
-  res.send(firstRow);
+app.get('/all', async (req, res) => {
+  try {
+    const { rows } = await client.query('SELECT * FROM aspects;');
+    res.send(rows);
+  } catch (e) {
+    console.error(e);
+  }
 });
 
+async function createDateTimeString() {
+  const now = new Date();
+  const dateString = `${now.getFullYear()}-${now.getMonth() + 1}-${now.getDate()}`;
+  const timeString = `${now.getHours()}:${now.getMinutes()}:${now.getSeconds()}`;
+  return `${dateString} ${timeString}`;
+}
+
+async function formulateInsert(req) {
+  const {
+    name, metric, freq, why, tracks,
+  } = req.body;
+  const timeDateString = await createDateTimeString();
+  const formattedTracks = `('${timeDateString}', '{${tracks}}')`;
+  return `'${name}', '${metric}', '${freq}', '${why}', ${formattedTracks}`;
+}
+
 app.post('/', async (req, res) => {
-  const name = req.body.name;
-  const ingredients = req.body.ingredients;
-  const directions = req.body.directions;
+  const attemptedInsert = await formulateInsert(req);
   await client.query(
-    `INSERT INTO recipes (name, ingredients, directions) VALUES ('${name}', '${ingredients}', '${directions}');`,
+    `INSERT INTO aspects (name, metric, freq, why, tracks) VALUES (${attemptedInsert});`,
   );
-  await res.redirect('/');
+  await res.status(201).send;
 });
 
 app.delete('/recipes', async (req, res) => {
