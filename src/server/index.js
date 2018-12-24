@@ -51,12 +51,16 @@ async function formulateInsert(req) {
 }
 
 app.post('/', async (req, res) => {
-  const attemptedInsert = await formulateInsert(req);
-  await client.query(
-    `INSERT INTO aspects (name, metric, freq, why, tracks) VALUES (${attemptedInsert});`,
-  );
-  await res.status(201).send;
-  res.redirect('/throwaway');
+  try {
+    const attemptedInsert = await formulateInsert(req);
+    await client.query(
+      `INSERT INTO aspects (name, metric, freq, why, tracks) VALUES (${attemptedInsert});`,
+    );
+    await res.status(201).send;
+    res.redirect('/throwaway');
+  } catch (e) {
+    console.log(e);
+  }
 });
 
 async function formulateDelete(req) {
@@ -84,8 +88,22 @@ app.delete('/remove', async (req, res) => {
   }
 });
 
-app.put('/recipes', async (req, res) => {
+async function formulatePUT(req) {
+  const [itemsToBeRenamed] = req.body;
+  const [original, updated] = itemsToBeRenamed;
+  return `UPDATE aspects SET name = '${updated}' WHERE name = '${original}';`;
+}
+
+app.put('/rename', async (req, res) => {
   console.log('PUT request received');
+  try {
+    const statement = await formulatePUT(req);
+    await client.query(statement);
+    res.status(200).send();
+  } catch (e) {
+    console.log('\nERROR MESSAGE', e);
+    res.status(400).send();
+  }
 });
 
 app.listen(PORT, () => console.log(`Listening on ${PORT}`));
