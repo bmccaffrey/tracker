@@ -111,6 +111,13 @@ export default class GetExample extends Component {
                   />
                   <label>{elm.name}</label>
                   <br />
+                  <input
+                    type="text"
+                    name={elm.name}
+                    id=""
+                    placeholder={elm.name}
+                    style={{ marginLeft: '20px', visibility: visible }}
+                  />
                 </>
               );
             })
