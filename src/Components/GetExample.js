@@ -6,7 +6,9 @@ export default class GetExample extends Component {
     this.state = {
       loading: true,
       examples: [],
+      editing: false,
     };
+    // this.toggleEditing = this.toggleEditing.bind(this);
   }
 
   componentDidMount() {
@@ -25,11 +27,64 @@ export default class GetExample extends Component {
     this.setState({ loading: false, examples: await this.fetcher('/all') });
   }
 
+  // toggleEditing() {
+  //   this.setState(state => ({
+  //     editing: !state.editing,
+  //   }));
+  // }
+
+  toggle = () => {
+    this.setState({
+      editing: !this.state.editing,
+    });
+  };
+
+  stuff = x => {
+    // x.map(elm => <h2>{elm.name}</h2>);
+    const visible = editing ? 'visible' : 'hidden';
+    const { editing } = this.state;
+    return x.map(elm => {
+      return (
+        <>
+          <input type="checkbox" />
+          <label>{elm.name}</label>
+          <br />
+        </>
+      );
+    });
+  };
+
   render() {
     // let name, metric, freq, why, tracks;
-    const { examples } = this.state;
+    const { examples, editing } = this.state;
+    const visible = editing ? 'visible' : 'hidden';
     return (
-      <div>{examples.length ? examples.map(elm => <h2>{elm.name}</h2>) : <h3>Loading</h3>}</div>
+      <div>
+        <br />
+        <button onClick={this.toggle}>Edit</button>
+        <br />
+        {examples.length ? (
+          examples.map(elm => {
+            return (
+              <>
+                <br />
+                <input type="checkbox" style={{ visibility: visible }} />
+                <label>{elm.name}</label>
+                <br />
+              </>
+            );
+          })
+        ) : (
+          <h3>Loading</h3>
+        )}
+      </div>
     );
   }
 }
+
+// const Input = styled.input.attrs({
+//   type: 'checkbox',
+// })`
+// visibility:
+// `;
+// <input type="checkbox"/><label>{elm.name}</label>
