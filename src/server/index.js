@@ -43,21 +43,18 @@ async function createDateTimeString() {
 
 async function formulateInsert(req) {
   const {
-    name, metric, freq, why, tracks,
+    name, metric, freq, why,
   } = req.body;
-  const timeDateString = await createDateTimeString();
-  const formattedTracks = `('${timeDateString}', '{${tracks}}')`;
-  return `'${name}', '${metric}', '${freq}', '${why}', ${formattedTracks}`;
+  const insertValue = `'${name}', '${metric}', '${freq}', '${why}'`;
+  return `INSERT INTO aspects (name, metric, freq, why) VALUES (${insertValue});`;
 }
 
-app.post('/', async (req, res) => {
+app.post('/addactivity', async (req, res) => {
   try {
-    const attemptedInsert = await formulateInsert(req);
-    await client.query(
-      `INSERT INTO aspects (name, metric, freq, why, tracks) VALUES (${attemptedInsert});`,
-    );
+    const statement = await formulateInsert(req);
+    await client.query(statement);
     await res.status(201).send;
-    res.redirect('/throwaway');
+    res.redirect('/simplified');
   } catch (e) {
     console.log(e);
   }
