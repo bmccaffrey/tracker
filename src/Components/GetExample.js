@@ -11,6 +11,7 @@ export default class GetExample extends Component {
     };
 
     this.handleChange = this.handleChange.bind(this);
+    this.deleteExamples = this.deleteExamples.bind(this);
   }
 
   componentDidMount() {
@@ -72,6 +73,21 @@ export default class GetExample extends Component {
     }
   };
 
+  async deleteExamples() {
+    const data = this.state.selected;
+    console.log(data);
+    fetch('/remove', {
+      method: 'DELETE',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(data),
+    });
+  }
+
+  // if response === 204, then remove this.state.selected from this.state.examples...
+  // well, honestly, I should probably just call getExamples on Success... but, directly modifying would save the DB call? hmmm...
+
   render() {
     // let name, metric, freq, why, tracks;
     const { examples, editing } = this.state;
@@ -80,6 +96,9 @@ export default class GetExample extends Component {
       <div>
         <br />
         <button onClick={this.toggle}>Edit</button>
+        <button onClick={this.deleteExamples} style={{ visibility: visible }}>
+          Delete
+        </button>
         <br />
         <form onSubmit={this.handleSubmit}>
           {examples.length ? (
