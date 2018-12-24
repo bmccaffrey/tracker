@@ -41,7 +41,25 @@ async function createDateTimeString() {
   return `${dateString} ${timeString}`;
 }
 
-async function formulateInsert(req) {
+async function insertName(req) {
+  console.log(req.body);
+  const { name } = req.body;
+  console.log(`INSERT INTO aspects (name) VALUES ('${name}');`);
+  return `INSERT INTO aspects (name) VALUES ('${name}');`;
+}
+
+app.post('/addname', async (req, res) => {
+  try {
+    const statement = await insertName(req);
+    await client.query(statement);
+    await res.status(201).send();
+    // res.redirect('/simplified');
+  } catch (e) {
+    console.log(e);
+  }
+});
+
+async function insertWholeActivity(req) {
   const {
     name, metric, freq, why,
   } = req.body;
@@ -51,7 +69,7 @@ async function formulateInsert(req) {
 
 app.post('/addactivity', async (req, res) => {
   try {
-    const statement = await formulateInsert(req);
+    const statement = await insertWholeActivity(req);
     await client.query(statement);
     await res.status(201).send;
     res.redirect('/simplified');
