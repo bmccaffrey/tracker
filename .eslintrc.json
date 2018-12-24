@@ -1,8 +1,6 @@
 {
 	"extends": "airbnb",
 	"rules": {
-		"react/jsx-filename-extension": 0,
-		"no-mixed-spaces-and-tabs": ["error", "smart-tabs"]
-		// "indent": ["error", "tab"]
+		"react/jsx-filename-extension": 0
 	}
 }
