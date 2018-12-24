@@ -56,6 +56,7 @@ app.post('/', async (req, res) => {
     `INSERT INTO aspects (name, metric, freq, why, tracks) VALUES (${attemptedInsert});`,
   );
   await res.status(201).send;
+  res.redirect('/throwaway');
 });
 
 app.delete('/recipes', async (req, res) => {
