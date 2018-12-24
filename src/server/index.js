@@ -59,13 +59,29 @@ app.post('/', async (req, res) => {
   res.redirect('/throwaway');
 });
 
-app.delete('/recipes', async (req, res) => {
-  console.log('DELETE Request Received');
-  const column = req.query.recipes;
-  column
-    ? await client.query(`DELETE FROM recipes WHERE name = '${column}';`)
-    : console.log('No column was received');
-  res.send(`${column} was deleted.`);
+async function formulateDelete(req) {
+  const itemsToBeDeleted = req.body;
+  let formattedItems = '';
+
+  for (let i = 0; i < itemsToBeDeleted.length; i++) {
+    if (i < itemsToBeDeleted.length - 1) {
+      formattedItems += `'${itemsToBeDeleted[i]}', `;
+    } else {
+      formattedItems += `'${itemsToBeDeleted[i]}'`;
+    }
+  }
+  return `DELETE FROM aspects WHERE name IN (${formattedItems})`;
+}
+
+app.delete('/remove', async (req, res) => {
+  try {
+    const statement = await formulateDelete(req);
+    await client.query(statement);
+    res.status(204).send();
+  } catch (e) {
+    console.log('\nERROR MESSAGE', e);
+    res.status(400).send();
+  }
 });
 
 app.put('/recipes', async (req, res) => {
