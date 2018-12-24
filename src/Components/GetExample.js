@@ -30,9 +30,9 @@ export default class GetExample extends Component {
     this.setState({ loading: false, examples: await this.fetcher('/all') });
   }
 
-  toggle = () => {
+  toggle = property => {
     this.setState({
-      editing: !this.state.editing,
+      [property]: !this.state[property],
     });
   };
 
@@ -85,17 +85,14 @@ export default class GetExample extends Component {
     });
   }
 
-  // if response === 204, then remove this.state.selected from this.state.examples...
-  // well, honestly, I should probably just call getExamples on Success... but, directly modifying would save the DB call? hmmm...
-
   render() {
-    // let name, metric, freq, why, tracks;
     const { examples, editing } = this.state;
     const visible = editing ? 'visible' : 'hidden';
     return (
       <div>
         <br />
-        <button onClick={this.toggle}>Edit</button>
+        <button onClick={e => this.toggle('editing')}>Edit</button>
+        <br />
         <button onClick={this.deleteExamples} style={{ visibility: visible }}>
           Delete
         </button>
@@ -125,10 +122,3 @@ export default class GetExample extends Component {
     );
   }
 }
-
-// const Input = styled.input.attrs({
-//   type: 'checkbox',
-// })`
-// visibility:
-// `;
-// <input type="checkbox"/><label>{elm.name}</label>
