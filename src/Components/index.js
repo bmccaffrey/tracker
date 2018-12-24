@@ -7,6 +7,8 @@ import Header from './Header';
 import Hamburger from './Hamburger';
 import Simplified from './Simplified';
 import API_FORM_TESTER from './Throwaway';
+import TrackingRevised from './TrackingRevised';
+import AnalyticsRevised from './AnalyticsRevised';
 
 export {
   Login,
@@ -18,4 +20,6 @@ export {
   Hamburger,
   Simplified,
   API_FORM_TESTER,
+  TrackingRevised,
+  AnalyticsRevised,
 };

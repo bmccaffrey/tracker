@@ -10,6 +10,8 @@ import {
   Header,
   Simplified,
   API_FORM_TESTER,
+  TrackingRevised,
+  AnalyticsRevised,
 } from './Components';
 
 // TODO: -- import routes & components from Dashboard.js
@@ -22,8 +24,8 @@ const App = () => (
         <Route exact path="/" component={Login} />
         <Route path="/greeting" component={Greeting} />
         <Route path="/dashboard" component={Dashboard} />
-        <Route path="/tracking" component={Tracking} />
-        <Route path="/analytics" component={Analytics} />
+        <Route path="/tracking" component={TrackingRevised} />
+        <Route path="/analytics" component={AnalyticsRevised} />
         <Route path="/simplified" component={Simplified} />
         <Route path="/throwaway" component={API_FORM_TESTER} />
         {/* <Route path="/" component={} /> */}
