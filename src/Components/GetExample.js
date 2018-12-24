@@ -7,8 +7,10 @@ export default class GetExample extends Component {
       loading: true,
       examples: [],
       editing: false,
+      selected: [],
     };
-    // this.toggleEditing = this.toggleEditing.bind(this);
+
+    this.handleChange = this.handleChange.bind(this);
   }
 
   componentDidMount() {
@@ -27,12 +29,6 @@ export default class GetExample extends Component {
     this.setState({ loading: false, examples: await this.fetcher('/all') });
   }
 
-  // toggleEditing() {
-  //   this.setState(state => ({
-  //     editing: !state.editing,
-  //   }));
-  // }
-
   toggle = () => {
     this.setState({
       editing: !this.state.editing,
@@ -40,7 +36,6 @@ export default class GetExample extends Component {
   };
 
   stuff = x => {
-    // x.map(elm => <h2>{elm.name}</h2>);
     const visible = editing ? 'visible' : 'hidden';
     const { editing } = this.state;
     return x.map(elm => {
@@ -54,6 +49,29 @@ export default class GetExample extends Component {
     });
   };
 
+  handleSubmit = e => {
+    alert('Submission');
+  };
+
+  addArrayElm = name => [...this.state.selected, name];
+
+  removeArrayElm = name => {
+    const copy = [...this.state.selected];
+    const index = copy.findIndex(elm => elm === name);
+    copy.splice(index, 1);
+    return copy;
+  };
+
+  handleChange = event => {
+    const { name } = event.target;
+
+    if (event.target.checked) {
+      this.setState({ selected: this.addArrayElm(name) });
+    } else {
+      this.setState({ selected: this.removeArrayElm(name) });
+    }
+  };
+
   render() {
     // let name, metric, freq, why, tracks;
     const { examples, editing } = this.state;
@@ -63,20 +81,27 @@ export default class GetExample extends Component {
         <br />
         <button onClick={this.toggle}>Edit</button>
         <br />
-        {examples.length ? (
-          examples.map(elm => {
-            return (
-              <>
-                <br />
-                <input type="checkbox" style={{ visibility: visible }} />
-                <label>{elm.name}</label>
-                <br />
-              </>
-            );
-          })
-        ) : (
-          <h3>Loading</h3>
-        )}
+        <form onSubmit={this.handleSubmit}>
+          {examples.length ? (
+            examples.map(elm => {
+              return (
+                <>
+                  <br />
+                  <input
+                    type="checkbox"
+                    name={elm.name}
+                    style={{ visibility: visible }}
+                    onChange={this.handleChange}
+                  />
+                  <label>{elm.name}</label>
+                  <br />
+                </>
+              );
+            })
+          ) : (
+            <h3>Loading</h3>
+          )}
+        </form>
       </div>
     );
   }
