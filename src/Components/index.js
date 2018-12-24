@@ -9,6 +9,7 @@ import Simplified from './Simplified';
 import API_FORM_TESTER from './Throwaway';
 import TrackingRevised from './TrackingRevised';
 import AnalyticsRevised from './AnalyticsRevised';
+import GreetingRevised from './GreetingRevised';
 
 export {
   Login,
@@ -22,4 +23,5 @@ export {
   API_FORM_TESTER,
   TrackingRevised,
   AnalyticsRevised,
+  GreetingRevised,
 };

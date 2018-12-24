@@ -12,6 +12,7 @@ import {
   API_FORM_TESTER,
   TrackingRevised,
   AnalyticsRevised,
+  GreetingRevised,
 } from './Components';
 
 // TODO: -- import routes & components from Dashboard.js
@@ -22,7 +23,7 @@ const App = () => (
       <Header />
       <Switch>
         <Route exact path="/" component={Login} />
-        <Route path="/greeting" component={Greeting} />
+        <Route path="/greeting" component={GreetingRevised} />
         <Route path="/dashboard" component={Dashboard} />
         <Route path="/tracking" component={TrackingRevised} />
         <Route path="/analytics" component={AnalyticsRevised} />
