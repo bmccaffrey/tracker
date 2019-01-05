@@ -42,9 +42,7 @@ async function createDateTimeString() {
 }
 
 async function insertName(req) {
-  console.log(req.body);
   const { name } = req.body;
-  console.log(`INSERT INTO aspects (name) VALUES ('${name}');`);
   return `INSERT INTO aspects (name) VALUES ('${name}');`;
 }
 
@@ -53,7 +51,21 @@ app.post('/addname', async (req, res) => {
     const statement = await insertName(req);
     await client.query(statement);
     await res.status(201).send();
-    // res.redirect('/simplified');
+  } catch (e) {
+    console.log(e);
+  }
+});
+
+async function insertMetric(req) {
+  const [id, metric] = req.body;
+  return `UPDATE aspects SET metric = '${metric}' where id = ${id};`;
+}
+
+app.post('/addmetric', async (req, res) => {
+  try {
+    const statement = await insertMetric(req);
+    await client.query(statement);
+    await res.status(201).send();
   } catch (e) {
     console.log(e);
   }
