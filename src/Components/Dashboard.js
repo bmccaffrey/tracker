@@ -60,6 +60,20 @@ const Dashboard = () => (
       </StyledButton>
     </div>
     <div>
+      <StyledLink to="/tracking">
+        <Accordion>
+          <p>Currently Tracking</p>
+          <p>Placeholder Text!</p>
+        </Accordion>
+      </StyledLink>
+      <hr />
+      <StyledLink to="/analytics">
+        <Accordion>
+          <p>Analytics &amp; Insights</p>
+          <p>Placeholder Text!</p>
+        </Accordion>
+      </StyledLink>
+      <hr />
       <Accordion>
         <p>Forecast</p>
         <p>{new Date().toDateString()}</p>
@@ -74,20 +88,6 @@ const Dashboard = () => (
         <p>Achievements</p>
         <p>You currently have 0 achievements.</p>
       </Accordion>
-      <hr />
-      <StyledLink to="/tracking">
-        <Accordion>
-          <p>Currently Tracking</p>
-          <p>Placeholder Text!</p>
-        </Accordion>
-      </StyledLink>
-      <hr />
-      <StyledLink to="/analytics">
-        <Accordion>
-          <p>Analytics &amp; Insights</p>
-          <p>Placeholder Text!</p>
-        </Accordion>
-      </StyledLink>
     </div>
   </Container>
 );
