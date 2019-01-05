@@ -20,7 +20,7 @@ export default class Tracking extends Component {
     };
 
     this.handleInput = this.handleInput.bind(this);
-    this.onSubmit = this.onSubmit.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
   }
 
   componentWillMount() {
@@ -39,11 +39,26 @@ export default class Tracking extends Component {
     this.setState({ loading: false, activities: await this.fetcher('/all') });
   }
 
+  async postMetric(data) {
+    console.log(data);
+    return fetch('/addmetric', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(data),
+    });
+  }
+
   handleInput(e) {
     this.setState({ value: e.target.value });
   }
 
-  onSubmit() {}
+  handleSubmit(e) {
+    const data = [e.target.id, this.state.value];
+    this.postMetric(data);
+    e.preventDefault();
+  }
 
   render() {
     const { activities } = this.state;
@@ -55,7 +70,7 @@ export default class Tracking extends Component {
           activities.map(activity => (
             <Accordion>
               <StyledRow>{activity.name}</StyledRow>
-              <form onSubmit={this.handleSubmit} name={activity.name}>
+              <form onSubmit={this.handleSubmit} name={activity.name} id={activity.id}>
                 <select id={activity.id} onChange={this.handleInput}>
                   <option value="">Please select a metric</option>
                   <option value="boolean">Boolean</option>
