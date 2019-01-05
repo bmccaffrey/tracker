@@ -43,7 +43,7 @@ export default class Tracking extends Component {
   }
 
   render() {
-    const { activities } = this.state;
+    const { activities, value } = this.state;
     return (
       <div>
         <h1>Alright!</h1>
@@ -52,6 +52,13 @@ export default class Tracking extends Component {
           activities.map(activity => (
             <Accordion>
               <StyledRow>{activity.name}</StyledRow>
+              <select id="metric-select">
+                <option value="">Please select a metric</option>
+                <option value="">Yes or No</option>
+                <option value="">Number</option>
+                <option value="">Time</option>
+              </select>
+              <button style={{ border: '1px solid black' }}>Add Metric</button>
             </Accordion>
           ))
         ) : (
