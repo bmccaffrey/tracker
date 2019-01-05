@@ -60,6 +60,25 @@ export default class Tracking extends Component {
     e.preventDefault();
   }
 
+  async postTracks(data) {
+    console.log(data);
+    return fetch('/addtracks', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(data),
+    });
+  }
+
+  async triggerModal() {}
+
+  async addData() {
+    this.triggerModal()
+      .then(data => this.postTracks(data))
+      .catch(err => console.log(err));
+  }
+
   render() {
     const { activities } = this.state;
     return (
@@ -69,9 +88,17 @@ export default class Tracking extends Component {
         {activities.length ? (
           activities.map(activity => (
             <Accordion>
-              <StyledRow>{activity.name}</StyledRow>
+              <StyledRow>
+                <button
+                  style={{ margin: '0 5% 0 -8%', borderRadius: '50%' }}
+                  onClick={this.postTracks}
+                >
+                  +
+                </button>
+                {activity.name}
+              </StyledRow>
               <form onSubmit={this.handleSubmit} name={activity.name} id={activity.id}>
-                <select id={activity.id} onChange={this.handleInput}>
+                <select id={activity.id} onChange={this.addData}>
                   <option value="">Please select a metric</option>
                   <option value="boolean">Boolean</option>
                   <option value="quantity">Quantity</option>
